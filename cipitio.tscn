@@ -1,15 +1,66 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpnyqtnjf56qq"]
+[gd_scene load_steps=6 format=3 uid="uid://dpnyqtnjf56qq"]
 
+[ext_resource type="Script" path="res://jugador.gd" id="1_mxkte"]
 [ext_resource type="Texture2D" uid="uid://d0eg8au1jb8rx" path="res://imagenes/cipitio_pixelart_transparente-removebg-preview.png" id="1_vaqne"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="Animation" id="Animation_n8teg"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D/CipitioPixelartTransparente-removebg-preview:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.251327]
+}
+
+[sub_resource type="Animation" id="Animation_yv5ta"]
+resource_name = "caminar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D/CipitioPixelartTransparente-removebg-preview:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.251327, -0.251327]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s2dud"]
+_data = {
+"RESET": SubResource("Animation_n8teg"),
+"caminar": SubResource("Animation_yv5ta")
+}
+
+[node name="player" type="Node2D"]
 position = Vector2(4, -1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(194, 261)
+script = ExtResource("1_mxkte")
 
 [node name="CipitioPixelartTransparente-removebg-preview" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-1, 3)
+position = Vector2(-82.3395, -154.07)
+rotation = 0.251327
+scale = Vector2(0.479439, 0.473847)
 texture = ExtResource("1_vaqne")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
-polygon = PackedVector2Array(-92, -133, -129, -89, -103, -41, -36, 1, -92, 39, -109, 121, -72, 131, -60, 155, -60, 183, -108, 190, -108, 210, -59, 214, -27, 208, -7, 194, 21, 207, 61, 216, 127, 206, 67, 166, 60, 140, 103, 111, 95, 75, 73, 27, 49, -9, 100, -20, 107, -63, 56, -136, -57, -153)
+position = Vector2(-95, -154)
+scale = Vector2(0.46875, 0.408198)
+polygon = PackedVector2Array(-92, -133, -64, -83.2929, -55.4667, -39.1966, -36, 1, -80, 38.8121, -92, 113.202, -72, 131, -60, 155, -60, 183, -98, 195.138, -97, 210.232, -59, 214, -38.4, 242.529, 2.13335, 249.879, 57.6, 274.377, 80.0667, 199.311, 67, 166, 60, 140, 81, 103.499, 78, 78.7023, 73, 27, 49, -9, 98.1333, -19.5983, 107, -63, 56, -136, -57, -153)
+
+[node name="Animaciones" type="AnimationPlayer" parent="CharacterBody2D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_s2dud")
+}
