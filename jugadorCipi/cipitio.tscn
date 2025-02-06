@@ -30,7 +30,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(2, -2),
+"transitions": PackedFloat32Array(0.406126, -0.34151),
 "update": 0,
 "values": [0.178024, -0.178024]
 }
@@ -57,7 +57,7 @@ texture = ExtResource("1_vaqne")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
 position = Vector2(-95, -154)
 scale = Vector2(0.46875, 0.408198)
-polygon = PackedVector2Array(-92, -133, -64, -83.2929, -55.4667, -39.1966, -36, 1, -80, 38.8121, -92, 113.202, -72, 131, -60, 155, -60, 183, -98, 195.138, -97, 210.232, -59, 214, -38.4, 242.529, 2.13335, 249.879, 57.6, 274.377, 80.0667, 199.311, 67, 166, 60, 140, 81, 103.499, 78, 78.7023, 73, 27, 49, -9, 98.1333, -19.5983, 107, -63, 56, -136, -57, -153)
+polygon = PackedVector2Array(-66.1333, -117.59, -64, -83.2929, -55.4667, -39.1966, -36, 1, -80, 38.8121, -92, 113.202, -72, 131, -60, 155, -60, 183, -98, 195.138, -97, 210.232, -59, 214, -38.4, 242.529, 2.13335, 249.879, 57.6, 274.377, 80.0667, 199.311, 67, 166, 60, 140, 81, 103.499, 78, 78.7023, 73, 27, 76.8, 7.34938, 83.2, -14.6987, 107, -63, 56, -136, -57, -153)
 
 [node name="Animaciones" type="AnimationPlayer" parent="CharacterBody2D"]
 root_node = NodePath("../..")
