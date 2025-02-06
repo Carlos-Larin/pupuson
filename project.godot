@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="pupuson"
+run/main_scene="res://escenario1/primermundo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://jugadorCipi/icon.svg"
+
+[display]
+
+window/size/viewport_width=2500
+window/size/viewport_height=1200
+window/size/mode=2
 
 [input]
 

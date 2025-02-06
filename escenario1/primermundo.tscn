@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://dohjw5vaknydc"]
+
+[ext_resource type="Texture2D" uid="uid://cchcn7wfg68uf" path="res://imagenes/mapas/mundo1.jpg" id="1_5olmu"]
+[ext_resource type="PackedScene" uid="uid://dc4wdhroqqydo" path="res://escenario1/arbol1.tscn" id="2_a3a57"]
+[ext_resource type="PackedScene" uid="uid://dpnyqtnjf56qq" path="res://jugadorCipi/cipitio.tscn" id="3_yw08b"]
+[ext_resource type="PackedScene" uid="uid://t1r552f2chsb" path="res://escenario1/ROCA.tscn" id="4_2xn88"]
+[ext_resource type="PackedScene" uid="uid://mt3hsbdiuoey" path="res://escenario1/casa_1.tscn" id="5_th0og"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wil7s"]
+size = Vector2(82.5625, 2101)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Mundo1" type="Sprite2D" parent="."]
+position = Vector2(641, 576.5)
+scale = Vector2(2.33967, 1.64898)
+texture = ExtResource("1_5olmu")
+
+[node name="Mundo1" type="Sprite2D" parent="Mundo1"]
+position = Vector2(-677.017, -21.5284)
+scale = Vector2(0.90975, 1.00004)
+texture = ExtResource("1_5olmu")
+
+[node name="Mundo1" type="Sprite2D" parent="Mundo1/Mundo1"]
+position = Vector2(284.23, 1122.49)
+scale = Vector2(0.90975, 1.00004)
+texture = ExtResource("1_5olmu")
+
+[node name="Mundo1" type="Sprite2D" parent="Mundo1/Mundo1/Mundo1"]
+position = Vector2(686.12, 5.089)
+scale = Vector2(0.90975, 1.00004)
+texture = ExtResource("1_5olmu")
+
+[node name="Mundo1" type="Sprite2D" parent="Mundo1/Mundo1/Mundo1/Mundo1"]
+position = Vector2(583.763, -1103.23)
+scale = Vector2(0.90975, 1.00004)
+texture = ExtResource("1_5olmu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-31, 519.977)
+shape = SubResource("RectangleShape2D_wil7s")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1992.56, 750.438)
+shape = SubResource("RectangleShape2D_wil7s")
+
+[node name="piedra1" parent="." instance=ExtResource("4_2xn88")]
+position = Vector2(200, 133)
+
+[node name="piedra2" parent="." instance=ExtResource("4_2xn88")]
+position = Vector2(1198, 321)
+
+[node name="arbol" parent="." instance=ExtResource("2_a3a57")]
+position = Vector2(498, 145)
+
+[node name="arbol2" parent="." instance=ExtResource("2_a3a57")]
+position = Vector2(174, 409)
+
+[node name="arbol3" parent="." instance=ExtResource("2_a3a57")]
+position = Vector2(414, 829)
+
+[node name="arbol3" parent="arbol3" instance=ExtResource("2_a3a57")]
+position = Vector2(888, 202)
+
+[node name="piedra3" parent="." instance=ExtResource("4_2xn88")]
+position = Vector2(845, 892)
+
+[node name="arbol3" parent="piedra3" instance=ExtResource("2_a3a57")]
+position = Vector2(414, 829)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(983.125, 6.12501)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_wil7s")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(977.5, 1213.25)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_wil7s")
+
+[node name="casa1" parent="." instance=ExtResource("5_th0og")]
+position = Vector2(1576, 613)
+
+[node name="player" parent="." instance=ExtResource("3_yw08b")]
+position = Vector2(530, 502)

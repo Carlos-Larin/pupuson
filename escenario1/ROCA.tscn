@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://t1r552f2chsb"]
+
+[ext_resource type="Texture2D" uid="uid://c42jb35rvlqjs" path="res://imagenes/ROCAPNG.png" id="1_yba5o"]
+
+[node name="piedra1" type="StaticBody2D"]
+
+[node name="Rocapng" type="Sprite2D" parent="."]
+position = Vector2(-9, -8)
+texture = ExtResource("1_yba5o")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-140, 68, -97, 112, -9, 147, 107, 124, 162, 75, 139, 0, -114, -1)

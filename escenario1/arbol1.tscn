@@ -2,11 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://bo6vkgifia3mb" path="res://imagenes/arbol1Pro.png" id="1_cl12a"]
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="arbol" type="StaticBody2D"]
 
 [node name="Arbol1Pro" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(1, -3)
+scale = Vector2(0.695822, 0.601382)
 texture = ExtResource("1_cl12a")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2.94139, -4.05)
+scale = Vector2(0.70596, 0.6)
 polygon = PackedVector2Array(-37, 314, -34, 101, 38, 100, 37, 315)

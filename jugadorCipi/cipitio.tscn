@@ -32,7 +32,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(2, -2),
 "update": 0,
-"values": [0.251327, -0.251327]
+"values": [0.178024, -0.178024]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s2dud"]
@@ -45,7 +45,7 @@ _data = {
 position = Vector2(2, -1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(92, 150)
+position = Vector2(93, 150)
 script = ExtResource("1_mxkte")
 
 [node name="CipitioPixelartTransparente-removebg-preview" type="Sprite2D" parent="CharacterBody2D"]
@@ -64,3 +64,6 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_s2dud")
 }
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-92, -150)
