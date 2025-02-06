@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgadnyosjjagq"]
+
+[ext_resource type="Texture2D" uid="uid://bu6l8ilx0udy0" path="res://imagenes/verdurasCar.png" id="1_gfbl0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ph7ss"]
+size = Vector2(100, 70)
+
+[node name="Carrito" type="Node2D"]
+
+[node name="VerdurasCar" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -1.78814e-07)
+scale = Vector2(0.195205, 0.159836)
+texture = ExtResource("1_gfbl0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VerdurasCar"]
+position = Vector2(15.3684, 6.2564)
+scale = Vector2(5.12281, 6.25641)
+shape = SubResource("RectangleShape2D_ph7ss")

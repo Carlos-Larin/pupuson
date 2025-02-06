@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dclmha6f3bhjr"]
+
+[ext_resource type="Texture2D" uid="uid://djc4kvinokqj4" path="res://imagenes/cantinaPNG.png" id="1_x0bn6"]
+
+[node name="Cantina" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CantinaPng" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.312, 0.3015)
+texture = ExtResource("1_x0bn6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-78, 75, -79, 5, -79, -37, -71, -37, -46, -64, 46, -64, 77, -36, 78, 73, 18, 73, 17, -2, -18, -2, -18, 76)
