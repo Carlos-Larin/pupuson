@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dpnyqtnjf56qq"]
 
-[ext_resource type="Script" path="res://jugador.gd" id="1_mxkte"]
+[ext_resource type="Script" path="res://jugadorCipi/jugador.gd" id="1_mxkte"]
 [ext_resource type="Texture2D" uid="uid://d0eg8au1jb8rx" path="res://imagenes/cipitio_pixelart_transparente-removebg-preview.png" id="1_vaqne"]
 
 [sub_resource type="Animation" id="Animation_n8teg"]
@@ -30,7 +30,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"transitions": PackedFloat32Array(2, -2),
 "update": 0,
 "values": [0.251327, -0.251327]
 }
@@ -42,10 +42,10 @@ _data = {
 }
 
 [node name="player" type="Node2D"]
-position = Vector2(4, -1)
+position = Vector2(2, -1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(194, 261)
+position = Vector2(92, 150)
 script = ExtResource("1_mxkte")
 
 [node name="CipitioPixelartTransparente-removebg-preview" type="Sprite2D" parent="CharacterBody2D"]
