@@ -17,9 +17,10 @@ config/icon="res://jugadorCipi/icon.svg"
 
 [display]
 
-window/size/viewport_width=2500
+window/size/viewport_width=1100
 window/size/viewport_height=1200
 window/size/mode=2
+window/stretch/scale=4.0
 
 [input]
 

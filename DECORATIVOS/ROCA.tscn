@@ -5,8 +5,11 @@
 [node name="piedra1" type="StaticBody2D"]
 
 [node name="Rocapng" type="Sprite2D" parent="."]
-position = Vector2(-9, -8)
+position = Vector2(-2.00001, -3.8147e-06)
+scale = Vector2(0.176, 0.188)
 texture = ExtResource("1_yba5o")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-140, 68, -97, 112, -9, 147, 107, 124, 162, 75, 139, 0, -114, -1)
+position = Vector2(1.14441e-05, 3)
+scale = Vector2(0.157611, 0.185493)
+polygon = PackedVector2Array(-140, 68, -97, 112, -9, 147, 107, 124, 162, 75, 145.929, -10.7821, -133.239, -16.1731)

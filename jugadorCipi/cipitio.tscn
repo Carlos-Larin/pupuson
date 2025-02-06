@@ -32,7 +32,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(0.406126, -0.34151),
 "update": 0,
-"values": [0.178024, -0.178024]
+"values": [0.136136, -0.178024]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s2dud"]
@@ -45,19 +45,19 @@ _data = {
 position = Vector2(2, -1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(93, 150)
+position = Vector2(-1, 2)
 script = ExtResource("1_mxkte")
 
 [node name="CipitioPixelartTransparente-removebg-preview" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-82.3395, -154.07)
+position = Vector2(-0.999998, -1)
 rotation = 0.251327
-scale = Vector2(0.479439, 0.473847)
+scale = Vector2(0.100199, 0.0893917)
 texture = ExtResource("1_vaqne")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
-position = Vector2(-95, -154)
-scale = Vector2(0.46875, 0.408198)
-polygon = PackedVector2Array(-66.1333, -117.59, -64, -83.2929, -55.4667, -39.1966, -36, 1, -80, 38.8121, -92, 113.202, -72, 131, -60, 155, -60, 183, -98, 195.138, -97, 210.232, -59, 214, -38.4, 242.529, 2.13335, 249.879, 57.6, 274.377, 80.0667, 199.311, 67, 166, 60, 140, 81, 103.499, 78, 78.7023, 73, 27, 76.8, 7.34938, 83.2, -14.6987, 107, -63, 56, -136, -57, -153)
+position = Vector2(-1.43739, 2.25416)
+scale = Vector2(0.102394, 0.0752698)
+polygon = PackedVector2Array(-110.898, -158.504, -105.617, -103.027, -84.4934, -79.2519, -55.4667, -39.1966, -58.0892, -15.8504, -89.7743, 7.92519, -92, 113.202, -72, 131, -60, 155, -60, 183, -89.7743, 206.055, -95.0551, 237.756, -38.4, 242.529, 2.13335, 249.879, 123.733, 244.979, 80.0667, 199.311, 67, 166, 60, 140, 95.0551, 126.803, 95.0551, 87.1771, 100.336, 31.7008, 76.8, 7.34938, 63.3701, -47.5511, 105.617, -103.027, 63.3701, -166.429, -73.9317, -190.205)
 
 [node name="Animaciones" type="AnimationPlayer" parent="CharacterBody2D"]
 root_node = NodePath("../..")
@@ -66,4 +66,4 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(-92, -150)
+position = Vector2(0, -1)
