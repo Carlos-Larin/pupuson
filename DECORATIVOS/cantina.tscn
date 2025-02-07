@@ -4,11 +4,13 @@
 
 [node name="Cantina" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CantinaPng" type="Sprite2D" parent="StaticBody2D"]
+[node name="CantinaPng" type="Sprite2D" parent="."]
 scale = Vector2(0.312, 0.3015)
 texture = ExtResource("1_x0bn6")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="CantinaPng"]
+scale = Vector2(3.20513, 3.31675)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CantinaPng/StaticBody2D"]
 polygon = PackedVector2Array(-78, 75, -79, 5, -79, -37, -71, -37, -46, -64, 46, -64, 77, -36, 78, 73, 18, 73, 17, -2, -18, -2, -18, 76)
+one_way_collision = true
