@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://dohjw5vaknydc"]
+[gd_scene load_steps=33 format=4 uid="uid://dohjw5vaknydc"]
 
 [ext_resource type="Texture2D" uid="uid://dc325y2h4krgi" path="res://imagenes/mapas/mundo2.jpg" id="1_y8m1s"]
 [ext_resource type="PackedScene" uid="uid://dc4wdhroqqydo" path="res://DECORATIVOS/arbol1.tscn" id="2_a3a57"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cplrf8aobjoi1" path="res://imagenes/casa3_pa.png" id="19_duc1d"]
 [ext_resource type="Texture2D" uid="uid://d2xq45gbnqcyh" path="res://imagenes/arbol_pa2.png" id="20_m41sb"]
 [ext_resource type="Texture2D" uid="uid://jcb3dtsju3dn" path="res://imagenes/arbusto_pa1.png" id="21_2xt3p"]
+[ext_resource type="Texture2D" uid="uid://cr8f24o52mkxj" path="res://imagenes/casa4_pa.png" id="22_y4g0v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avu32"]
 texture = ExtResource("1_y8m1s")
@@ -9492,7 +9493,7 @@ position = Vector2(-86, 99)
 position = Vector2(39, 102)
 
 [node name="Casa2Pa" type="Sprite2D" parent="tileLayers"]
-position = Vector2(955, 572)
+position = Vector2(954, 575)
 scale = Vector2(1.02039, 1.00595)
 texture = ExtResource("15_hyn7n")
 
@@ -9575,7 +9576,7 @@ scale = Vector2(0.135762, 0.407294)
 texture = ExtResource("21_2xt3p")
 
 [node name="ArbustoPa8" type="Sprite2D" parent="."]
-position = Vector2(-152, 1103)
+position = Vector2(-152, 1200)
 scale = Vector2(0.135762, 0.407294)
 texture = ExtResource("21_2xt3p")
 
@@ -9583,3 +9584,8 @@ texture = ExtResource("21_2xt3p")
 position = Vector2(-152, 682)
 scale = Vector2(0.135762, 0.407294)
 texture = ExtResource("21_2xt3p")
+
+[node name="Casa4Pa" type="Sprite2D" parent="."]
+position = Vector2(361, 588)
+scale = Vector2(0.414047, 0.353581)
+texture = ExtResource("22_y4g0v")
