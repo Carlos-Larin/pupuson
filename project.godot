@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="pupuson"
-run/main_scene="res://escenario1/primermundo.tscn"
+run/main_scene="res://mundo/mundo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://jugadorCipi/icon.svg"
 
