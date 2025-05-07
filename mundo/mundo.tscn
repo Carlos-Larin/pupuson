@@ -26754,11 +26754,11 @@ tile_map_data = PackedByteArray("AAD+/wEACQAaAFkAAAD+/wIACQAaAFoAAAD+/wMACQAaAFs
 tile_set = SubResource("TileSet_2ky76")
 collision_visibility_mode = 2
 
+[node name="sueloTierra" parent="." instance=ExtResource("13_pgxfp")]
+position = Vector2(-78, 94)
+
 [node name="player1" parent="." instance=ExtResource("10_katq3")]
 position = Vector2(-396, -59)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.65, 0.65)
-
-[node name="sueloTierra" parent="." instance=ExtResource("13_pgxfp")]
-position = Vector2(-78, 94)
