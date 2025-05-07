@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bam66arcd3s0e"]
+
+[ext_resource type="Texture2D" uid="uid://ci5one52bqj34" path="res://imagenes/acto1/suelo.png" id="1_i8ex4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i4d0x"]
+
+[node name="sueloTierra" type="Node2D"]
+
+[node name="suelotexture" type="Sprite2D" parent="."]
+texture = ExtResource("1_i8ex4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelotexture"]
+physics_material_override = SubResource("PhysicsMaterial_i4d0x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelotexture/StaticBody2D"]
+polygon = PackedVector2Array(-355, -62, 352, -64, 356, 104, -352, 106)

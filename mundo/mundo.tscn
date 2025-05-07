@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://caj5hlsbveh44"]
+[gd_scene load_steps=25 format=4 uid="uid://caj5hlsbveh44"]
 
 [ext_resource type="Texture2D" uid="uid://bo6vkgifia3mb" path="res://imagenes/acto1/arbol1Pro.png" id="1_fs4u6"]
 [ext_resource type="Texture2D" uid="uid://5p0767hlikpk" path="res://imagenes/mapas/pasaquina2.png" id="1_ga103"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrtv8rfedwxb" path="res://imagenes/mapas/pasaquina2_green.png" id="8_wetmw"]
 [ext_resource type="Texture2D" uid="uid://dek5bop7mn6q0" path="res://imagenes/mapas/pasa_camino1.jpg" id="9_vwgjx"]
 [ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="10_katq3"]
+[ext_resource type="PackedScene" uid="uid://bam66arcd3s0e" path="res://DECORATIVOS/suelo_tierra.tscn" id="13_pgxfp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j1f4u"]
 texture = ExtResource("1_fs4u6")
@@ -26754,7 +26755,10 @@ tile_set = SubResource("TileSet_2ky76")
 collision_visibility_mode = 2
 
 [node name="player1" parent="." instance=ExtResource("10_katq3")]
-position = Vector2(0, -54)
+position = Vector2(-396, -59)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.65, 0.65)
+
+[node name="sueloTierra" parent="." instance=ExtResource("13_pgxfp")]
+position = Vector2(-78, 94)

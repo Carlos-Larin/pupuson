@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3uko41r7t7tb"]
+[gd_scene load_steps=6 format=3 uid="uid://c3uko41r7t7tb"]
 
+[ext_resource type="Script" path="res://player/player_1.gd" id="1_0b7w1"]
 [ext_resource type="Texture2D" uid="uid://dkb0fqaol28e2" path="res://imagenes/personaje/niño/508-yea.png" id="1_l82hi"]
 
 [sub_resource type="Animation" id="Animation_eobdr"]
@@ -14,6 +15,7 @@ _data = {
 size = Vector2(94, 118.5)
 
 [node name="player1" type="CharacterBody2D"]
+script = ExtResource("1_0b7w1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(8.5, -24.5)

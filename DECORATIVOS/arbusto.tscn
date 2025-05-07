@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dkuhologpnmvy"]
 
-[ext_resource type="Texture2D" uid="uid://il3ocsljcoiw" path="res://imagenes/arbustoPNG.png" id="1_awfsh"]
+[ext_resource type="Texture2D" uid="uid://il3ocsljcoiw" path="res://imagenes/acto1/arbustoPNG.png" id="1_awfsh"]
 
 [node name="Arbusto" type="Node2D"]
 
