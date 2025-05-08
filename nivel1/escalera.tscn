@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b43cudbblsq1p"]
+
+[ext_resource type="Texture2D" uid="uid://mvgnv5svbf3x" path="res://objetosLetales/Stairs.png" id="1_xt484"]
+
+[node name="ESCALERA" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.999996, -4)
+scale = Vector2(0.437671, 0.272924)
+texture = ExtResource("1_xt484")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(5, -13)
+scale = Vector2(0.447936, 0.258822)
+polygon = PackedVector2Array(-185.236, -747.329, 173, -748, 169, 748, -175, 744)

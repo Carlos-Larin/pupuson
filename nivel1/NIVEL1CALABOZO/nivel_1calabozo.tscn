@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfpw73xswoqvn"]
+[gd_scene load_steps=6 format=3 uid="uid://dfpw73xswoqvn"]
 
 [ext_resource type="PackedScene" uid="uid://dnty6kgpa6u0y" path="res://nivel1/fondoEsceario.tscn" id="1_40m08"]
 [ext_resource type="PackedScene" uid="uid://dh5m3a8q2w7tr" path="res://nivel1/lavadaña.tscn" id="2_6wniq"]
 [ext_resource type="PackedScene" uid="uid://ng1wpavv2rc5" path="res://nivel1/plataforma.tscn" id="2_82b5e"]
 [ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="4_6jopt"]
+[ext_resource type="PackedScene" uid="uid://b43cudbblsq1p" path="res://nivel1/escalera.tscn" id="5_3pl7a"]
 
 [node name="NIVEL1CALABOZO" type="Node2D"]
 
@@ -39,8 +40,15 @@ scale = Vector2(1.22631, 1.8356)
 position = Vector2(630, 255)
 scale = Vector2(1.50384, 3.36942)
 
+[node name="plataforma4" parent="." instance=ExtResource("2_82b5e")]
+position = Vector2(1059, 290)
+scale = Vector2(2.36946, 2.23468)
+
 [node name="player1" parent="." instance=ExtResource("4_6jopt")]
 position = Vector2(-648, 196)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.65, 0.65)
+
+[node name="ESCALERA" parent="." instance=ExtResource("5_3pl7a")]
+position = Vector2(1453, 45)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6c226gmrdb8t"]
+[gd_scene load_steps=3 format=3 uid="uid://b6c226gmrdb8t"]
 
 [ext_resource type="Texture2D" uid="uid://qqtnnlsgb0n2" path="res://nivel1/puerta.png" id="1_cxdbn"]
+[ext_resource type="Script" path="res://nivel1/puerta_iteractuable.gd" id="1_u0dbb"]
 
-[node name="puertaIteractuable" type="StaticBody2D"]
+[node name="puertaIteractuable" type="Area2D"]
+script = ExtResource("1_u0dbb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-0.999996, 2)
