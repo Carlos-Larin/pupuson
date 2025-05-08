@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxkjphpx1u3ew"]
+[gd_scene load_steps=7 format=3 uid="uid://bxkjphpx1u3ew"]
 
-[ext_resource type="Texture2D" uid="uid://2asd2qsum43y" path="res://imagenes/menu/menu.png" id="1_sav5o"]
 [ext_resource type="Script" path="res://scrips/menusc.gd" id="2_j2f2q"]
+[ext_resource type="Texture2D" uid="uid://c2wgymole3wnq" path="res://sprites/mi_gif/frame_00_delay-0.15s.png" id="2_rxmjt"]
+[ext_resource type="SpriteFrames" uid="uid://d4k7inx81jkws" path="res://menu.tres" id="3_hgjsy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddc5l"]
 bg_color = Color(0, 0, 0, 0.772549)
@@ -29,14 +30,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.896667, 0.198102, 0.429188, 1)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect"]
+position = Vector2(291, 143)
+scale = Vector2(0.558594, 0.277588)
+sprite_frames = ExtResource("3_hgjsy")
+autoplay = "default"
+frame_progress = 0.312877
+
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_sav5o")
+texture = ExtResource("2_rxmjt")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

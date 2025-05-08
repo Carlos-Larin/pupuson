@@ -1,0 +1,56 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://d4k7inx81jkws"]
+
+[ext_resource type="Texture2D" uid="uid://c2wgymole3wnq" path="res://sprites/mi_gif/frame_00_delay-0.15s.png" id="1_0sfbo"]
+[ext_resource type="Texture2D" uid="uid://cjqc0q81kkqo" path="res://sprites/mi_gif/frame_01_delay-0.15s.png" id="2_7qgva"]
+[ext_resource type="Texture2D" uid="uid://csiq4sqgocwi0" path="res://sprites/mi_gif/frame_02_delay-0.15s.png" id="3_aexct"]
+[ext_resource type="Texture2D" uid="uid://tj6ey2yfnsvj" path="res://sprites/mi_gif/frame_03_delay-0.15s.png" id="4_xf3ec"]
+[ext_resource type="Texture2D" uid="uid://blasgxijfgi8d" path="res://sprites/mi_gif/frame_04_delay-0.15s.png" id="5_fm30v"]
+[ext_resource type="Texture2D" uid="uid://ni7t3tm1oqed" path="res://sprites/mi_gif/frame_05_delay-0.15s.png" id="6_wug71"]
+[ext_resource type="Texture2D" uid="uid://c6qpl78igel5k" path="res://sprites/mi_gif/frame_06_delay-0.15s.png" id="7_sqdyl"]
+[ext_resource type="Texture2D" uid="uid://6imibjiuru3f" path="res://sprites/mi_gif/frame_07_delay-0.15s.png" id="8_lmqpl"]
+[ext_resource type="Texture2D" uid="uid://fggk6md50tft" path="res://sprites/mi_gif/frame_08_delay-0.15s.png" id="9_v2kng"]
+[ext_resource type="Texture2D" uid="uid://b1wxe5ukhn8fe" path="res://sprites/mi_gif/frame_09_delay-0.15s.png" id="10_87pm0"]
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0sfbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7qgva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aexct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xf3ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fm30v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wug71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sqdyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lmqpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v2kng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_87pm0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
