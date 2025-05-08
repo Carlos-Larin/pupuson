@@ -1,18 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://daj56yorfqw5s"]
 
-[ext_resource type="Texture2D" uid="uid://bj5si7ouotekr" path="res://nivel1/pared1.jpg" id="1_e3asw"]
+[ext_resource type="Texture2D" uid="uid://di71fxb6lgogv" path="res://imagenes/acto1/SanMi.png" id="1_fq55l"]
 
-[node name="pared" type="StaticBody2D"]
+[node name="sanmiColisianado" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.25, -111.75)
-scale = Vector2(0.626918, 0.697492)
-texture = ExtResource("1_e3asw")
-
-[node name="Pared1" type="Sprite2D" parent="."]
-position = Vector2(0, 110)
-scale = Vector2(0.629707, 0.695925)
-texture = ExtResource("1_e3asw")
+[node name="SanMi" type="Sprite2D" parent="."]
+position = Vector2(432.5, -80)
+scale = Vector2(0.85612, 0.59375)
+texture = ExtResource("1_fq55l")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-225, 223, 225, 224, 223, -225, -225, -224)
+position = Vector2(-60.1433, 91.6403)
+scale = Vector2(0.701619, 0.59327)
+polygon = PackedVector2Array(-225, 223, 225, 224, 230, -798, -220, -801)

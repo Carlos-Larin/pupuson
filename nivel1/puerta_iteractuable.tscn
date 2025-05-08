@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6c226gmrdb8t"]
+
+[ext_resource type="Texture2D" uid="uid://qqtnnlsgb0n2" path="res://nivel1/puerta.png" id="1_cxdbn"]
+
+[node name="puertaIteractuable" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.999996, 2)
+scale = Vector2(0.675573, 0.640703)
+texture = ExtResource("1_cxdbn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-0.505251, 3.99491)
+scale = Vector2(0.663168, 0.678796)
+polygon = PackedVector2Array(-55.0309, -72.1791, -56.5388, 92.8189, 49.0151, 91.3457, 45.9993, -70.7059)

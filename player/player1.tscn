@@ -12,7 +12,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rag7b"]
-size = Vector2(94, 118.5)
+size = Vector2(86, 118.5)
 
 [node name="player1" type="CharacterBody2D"]
 script = ExtResource("1_0b7w1")
@@ -32,5 +32,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(13, -14.75)
+position = Vector2(9, -14.75)
 shape = SubResource("RectangleShape2D_rag7b")
