@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://daj56yorfqw5s"]
+
+[ext_resource type="Texture2D" uid="uid://bj5si7ouotekr" path="res://nivel1/pared1.jpg" id="1_e3asw"]
+
+[node name="pared" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.25, -111.75)
+scale = Vector2(0.626918, 0.697492)
+texture = ExtResource("1_e3asw")
+
+[node name="Pared1" type="Sprite2D" parent="."]
+position = Vector2(0, 110)
+scale = Vector2(0.629707, 0.695925)
+texture = ExtResource("1_e3asw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-225, 223, 225, 224, 223, -225, -225, -224)

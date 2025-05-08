@@ -22,6 +22,12 @@ window/size/viewport_height=1200
 window/size/mode=2
 window/stretch/scale=4.0
 
+[file_customization]
+
+folder_colors={
+"res://nivel1/": "green"
+}
+
 [input]
 
 ui_rigth={
