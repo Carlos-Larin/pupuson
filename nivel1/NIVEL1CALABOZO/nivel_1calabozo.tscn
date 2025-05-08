@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfpw73xswoqvn"]
+
+[ext_resource type="PackedScene" uid="uid://dnty6kgpa6u0y" path="res://nivel1/fondoEsceario.tscn" id="1_40m08"]
+[ext_resource type="PackedScene" uid="uid://dh5m3a8q2w7tr" path="res://nivel1/lavadaña.tscn" id="2_6wniq"]
+[ext_resource type="PackedScene" uid="uid://ng1wpavv2rc5" path="res://nivel1/plataforma.tscn" id="2_82b5e"]
+[ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="4_6jopt"]
+
+[node name="NIVEL1CALABOZO" type="Node2D"]
+
+[node name="pared" parent="." instance=ExtResource("1_40m08")]
+position = Vector2(-38, 38)
+scale = Vector2(1.13275, 1)
+
+[node name="LAVADAÑA" parent="." instance=ExtResource("2_6wniq")]
+position = Vector2(92, 305)
+scale = Vector2(1.2036, 1.33443)
+
+[node name="LAVADAÑA2" parent="." instance=ExtResource("2_6wniq")]
+position = Vector2(1174, 308)
+scale = Vector2(1.4496, 1.34805)
+
+[node name="plataforma2" parent="." instance=ExtResource("2_82b5e")]
+position = Vector2(-77, 301)
+scale = Vector2(1.37786, 1.86928)
+
+[node name="plataforma3" parent="plataforma2" instance=ExtResource("2_82b5e")]
+position = Vector2(158.02, -83.6643)
+scale = Vector2(0.598541, 0.519695)
+
+[node name="plataforma2" parent="plataforma2" instance=ExtResource("2_82b5e")]
+position = Vector2(96.2932, -49.3281)
+scale = Vector2(0.75928, 0.576043)
+
+[node name="plataforma" parent="." instance=ExtResource("2_82b5e")]
+position = Vector2(-616, 303)
+scale = Vector2(1.22631, 1.8356)
+
+[node name="plataforma3" parent="." instance=ExtResource("2_82b5e")]
+position = Vector2(630, 255)
+scale = Vector2(1.50384, 3.36942)
+
+[node name="player1" parent="." instance=ExtResource("4_6jopt")]
+position = Vector2(-648, 196)
+
+[node name="Camera2D" type="Camera2D" parent="player1"]
+zoom = Vector2(0.65, 0.65)

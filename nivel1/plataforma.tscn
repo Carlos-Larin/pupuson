@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ng1wpavv2rc5"]
+
+[ext_resource type="Texture2D" uid="uid://b7tyblh8ycqfd" path="res://nivel1/suelo.jpg" id="1_btskr"]
+
+[node name="plataforma" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(70.25, 0)
+scale = Vector2(2.22174, 1)
+texture = ExtResource("1_btskr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-57, -32, 197, -31, 197, 30, -57, 30)

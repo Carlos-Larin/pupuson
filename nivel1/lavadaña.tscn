@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh5m3a8q2w7tr"]
+
+[ext_resource type="Texture2D" uid="uid://b5nu887wkvh4n" path="res://nivel1/LavaTieza.png" id="1_0j0kh"]
+
+[node name="LAVADAÑA" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(0.994749, 1.23438)
+texture = ExtResource("1_0j0kh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-424, -36, 426, -35, 427, 41, -423, 41)

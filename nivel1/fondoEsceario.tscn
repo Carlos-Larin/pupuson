@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnty6kgpa6u0y"]
+
+[ext_resource type="Texture2D" uid="uid://bj5si7ouotekr" path="res://nivel1/pared1.jpg" id="1_dtji6"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(1066, 156)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D10"]
+position = Vector2(7, -631)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10"]
+position = Vector2(8, -313)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(-1069, 145)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D9"]
+position = Vector2(-1, -324)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D9/Sprite2D8"]
+position = Vector2(1427, -296)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-1070, -475)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(-354, -476)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(362, -156)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(359, 159)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-354, -156)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-357, 159)
+texture = ExtResource("1_dtji6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(444.067, -6.10352e-05)
+scale = Vector2(1.38895, 1)
+polygon = PackedVector2Array(-713, -635, 716, -633, 713, -517, -713, -519)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(-643, 3860.43)
+scale = Vector2(0.0990645, 6.83437)
+polygon = PackedVector2Array(-716.705, -640.942, 767.177, -640.503, 713, -517, -713, -519)
