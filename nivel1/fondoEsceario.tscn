@@ -16,6 +16,30 @@ texture = ExtResource("1_dtji6")
 position = Vector2(8, -313)
 texture = ExtResource("1_dtji6")
 
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10/Sprite2D8"]
+position = Vector2(718, -317)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10/Sprite2D8/Sprite2D8"]
+position = Vector2(0, 310)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10/Sprite2D8/Sprite2D8/Sprite2D8"]
+position = Vector2(-3, 314)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10/Sprite2D8/Sprite2D8/Sprite2D8/Sprite2D8"]
+position = Vector2(726, -623)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10/Sprite2D8/Sprite2D8/Sprite2D8/Sprite2D8/Sprite2D8"]
+position = Vector2(-4, 317)
+texture = ExtResource("1_dtji6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D10/Sprite2D8/Sprite2D8/Sprite2D8/Sprite2D8/Sprite2D8/Sprite2D8"]
+position = Vector2(-3, 317)
+texture = ExtResource("1_dtji6")
+
 [node name="Sprite2D9" type="Sprite2D" parent="."]
 position = Vector2(-1069, 145)
 texture = ExtResource("1_dtji6")
@@ -53,11 +77,21 @@ position = Vector2(-357, 159)
 texture = ExtResource("1_dtji6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(444.067, -6.10352e-05)
-scale = Vector2(1.38895, 1)
+position = Vector2(364.672, -0.00012207)
+scale = Vector2(1.31941, 1)
+polygon = PackedVector2Array(-713, -635, 716, -633, 713, -517, -713, -519)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="."]
+position = Vector2(1987.37, 3.99994)
+scale = Vector2(1.24891, 1)
 polygon = PackedVector2Array(-713, -635, 716, -633, 713, -517, -713, -519)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
 position = Vector2(-643, 3860.43)
 scale = Vector2(0.0990645, 6.83437)
 polygon = PackedVector2Array(-716.705, -640.942, 767.177, -640.503, 713, -517, -713, -519)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
+position = Vector2(1718, 3854)
+scale = Vector2(0.0990645, 6.83437)
+polygon = PackedVector2Array(-716.705, -640.942, 767.177, -640.503, 713, -517, -713, -519, -713.973, -551.048)

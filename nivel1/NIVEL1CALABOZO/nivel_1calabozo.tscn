@@ -26,6 +26,9 @@ position = Vector2(-648, 196)
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.65, 0.65)
 
+[node name="ESCALERA" parent="." instance=ExtResource("5_3pl7a")]
+position = Vector2(1453, 45)
+
 [node name="plataforma2" parent="." instance=ExtResource("2_82b5e")]
 position = Vector2(-77, 301)
 scale = Vector2(1.37786, 1.86928)
@@ -33,6 +36,10 @@ scale = Vector2(1.37786, 1.86928)
 [node name="plataforma3" parent="plataforma2" instance=ExtResource("2_82b5e")]
 position = Vector2(158.02, -83.6643)
 scale = Vector2(0.598541, 0.519695)
+
+[node name="plataforma3" parent="plataforma2/plataforma3" instance=ExtResource("2_82b5e")]
+position = Vector2(1443.27, -300.176)
+scale = Vector2(1.55662, -0.542378)
 
 [node name="plataforma2" parent="plataforma2" instance=ExtResource("2_82b5e")]
 position = Vector2(96.2932, -49.3281)
@@ -53,6 +60,3 @@ scale = Vector2(1.50384, 3.36942)
 [node name="plataforma4" parent="." instance=ExtResource("2_82b5e")]
 position = Vector2(1059, 290)
 scale = Vector2(2.36946, 2.23468)
-
-[node name="ESCALERA" parent="." instance=ExtResource("5_3pl7a")]
-position = Vector2(1453, 45)

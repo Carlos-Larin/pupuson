@@ -36,5 +36,7 @@ position = Vector2(9, -14.75)
 shape = SubResource("RectangleShape2D_rag7b")
 
 [node name="HealthLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = -19.0
+offset_top = -99.0
+offset_right = 21.0
+offset_bottom = -76.0
