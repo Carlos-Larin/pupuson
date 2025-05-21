@@ -61,23 +61,23 @@ scale = Vector2(2.36946, 2.23468)
 [node name="StaticBody2D" parent="." instance=ExtResource("6_6vk2o")]
 position = Vector2(1260, -135)
 
-[node name="StaticBody2D2" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(966, -135)
+[node name="StaticBody2D2" parent="StaticBody2D" instance=ExtResource("6_6vk2o")]
+position = Vector2(-294, 0)
 
-[node name="StaticBody2D3" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(676, -138)
+[node name="StaticBody2D3" parent="StaticBody2D/StaticBody2D2" instance=ExtResource("6_6vk2o")]
+position = Vector2(-290, -3)
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(377, -138)
+[node name="StaticBody2D4" parent="StaticBody2D/StaticBody2D2/StaticBody2D3" instance=ExtResource("6_6vk2o")]
+position = Vector2(-299, 0)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(84, -142)
+[node name="StaticBody2D5" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4" instance=ExtResource("6_6vk2o")]
+position = Vector2(-293, -4)
 
-[node name="StaticBody2D6" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(-204, -144)
+[node name="StaticBody2D6" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5" instance=ExtResource("6_6vk2o")]
+position = Vector2(-288, -2)
 
-[node name="StaticBody2D7" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(-500, -142)
+[node name="StaticBody2D7" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5/StaticBody2D6" instance=ExtResource("6_6vk2o")]
+position = Vector2(-296, 2)
 
-[node name="StaticBody2D8" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(-787, -140)
+[node name="StaticBody2D8" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5/StaticBody2D6/StaticBody2D7" instance=ExtResource("6_6vk2o")]
+position = Vector2(-287, 2)
