@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfpw73xswoqvn"]
+[gd_scene load_steps=7 format=3 uid="uid://dfpw73xswoqvn"]
 
 [ext_resource type="PackedScene" uid="uid://dnty6kgpa6u0y" path="res://nivel1/fondoEsceario.tscn" id="1_40m08"]
 [ext_resource type="PackedScene" uid="uid://dh5m3a8q2w7tr" path="res://nivel1/lavadaña.tscn" id="2_6wniq"]
 [ext_resource type="PackedScene" uid="uid://ng1wpavv2rc5" path="res://nivel1/plataforma.tscn" id="2_82b5e"]
 [ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="4_6jopt"]
 [ext_resource type="PackedScene" uid="uid://b43cudbblsq1p" path="res://nivel1/escalera.tscn" id="5_3pl7a"]
+[ext_resource type="PackedScene" uid="uid://6hgflq6q1fm8" path="res://nivel1/plataformaALTA.tscn" id="6_6vk2o"]
 
 [node name="NIVEL1CALABOZO" type="Node2D"]
 
@@ -37,10 +38,6 @@ scale = Vector2(1.37786, 1.86928)
 position = Vector2(158.02, -83.6643)
 scale = Vector2(0.598541, 0.519695)
 
-[node name="plataforma3" parent="plataforma2/plataforma3" instance=ExtResource("2_82b5e")]
-position = Vector2(1443.27, -300.176)
-scale = Vector2(1.55662, -0.542378)
-
 [node name="plataforma2" parent="plataforma2" instance=ExtResource("2_82b5e")]
 position = Vector2(96.2932, -49.3281)
 scale = Vector2(0.75928, 0.576043)
@@ -60,3 +57,27 @@ scale = Vector2(1.50384, 3.36942)
 [node name="plataforma4" parent="." instance=ExtResource("2_82b5e")]
 position = Vector2(1059, 290)
 scale = Vector2(2.36946, 2.23468)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(1260, -135)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(966, -135)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(676, -138)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(377, -138)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(84, -142)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(-204, -144)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(-500, -142)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("6_6vk2o")]
+position = Vector2(-787, -140)
