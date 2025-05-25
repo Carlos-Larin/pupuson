@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfpw73xswoqvn"]
+[gd_scene load_steps=13 format=3 uid="uid://dfpw73xswoqvn"]
 
 [ext_resource type="PackedScene" uid="uid://dnty6kgpa6u0y" path="res://nivel1/fondoEsceario.tscn" id="1_40m08"]
 [ext_resource type="PackedScene" uid="uid://dh5m3a8q2w7tr" path="res://nivel1/lavadaña.tscn" id="2_6wniq"]
@@ -6,6 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="4_6jopt"]
 [ext_resource type="PackedScene" uid="uid://b43cudbblsq1p" path="res://nivel1/escalera.tscn" id="5_3pl7a"]
 [ext_resource type="PackedScene" uid="uid://6hgflq6q1fm8" path="res://nivel1/plataformaALTA.tscn" id="6_6vk2o"]
+[ext_resource type="Script" path="res://nivel1/NIVEL1CALABOZO/espinas.gd" id="7_fwtw0"]
+[ext_resource type="Texture2D" uid="uid://7jqfdc3xqlvi" path="res://objetosLetales/puas.png" id="8_lg117"]
+[ext_resource type="Script" path="res://nivel1/NIVEL1CALABOZO/remolino.gd" id="9_bw5cg"]
+[ext_resource type="Texture2D" uid="uid://dcy8pa46p2c3c" path="res://objetosLetales/remolino2.png" id="10_m6sr0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlywk"]
+size = Vector2(125, 49)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_geang"]
+radius = 35.0143
 
 [node name="NIVEL1CALABOZO" type="Node2D"]
 
@@ -14,7 +24,7 @@ position = Vector2(-38, 38)
 scale = Vector2(1.13275, 1)
 
 [node name="LAVADAÑA" parent="." instance=ExtResource("2_6wniq")]
-position = Vector2(92, 305)
+position = Vector2(85, 304)
 scale = Vector2(1.2036, 1.33443)
 
 [node name="LAVADAÑA2" parent="." instance=ExtResource("2_6wniq")]
@@ -81,3 +91,31 @@ position = Vector2(-296, 2)
 
 [node name="StaticBody2D8" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5/StaticBody2D6/StaticBody2D7" instance=ExtResource("6_6vk2o")]
 position = Vector2(-287, 2)
+
+[node name="espinas" type="Area2D" parent="."]
+script = ExtResource("7_fwtw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="espinas"]
+position = Vector2(998.5, 194.125)
+scale = Vector2(0.302876, 0.212591)
+texture = ExtResource("8_lg117")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas"]
+position = Vector2(1000.5, 191.5)
+shape = SubResource("RectangleShape2D_jlywk")
+
+[node name="remolino" type="Area2D" parent="."]
+position = Vector2(740, -116)
+script = ExtResource("9_bw5cg")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="remolino"]
+position = Vector2(-316, 249)
+scale = Vector2(0.284228, 0.285988)
+texture = ExtResource("10_m6sr0")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="remolino"]
+position = Vector2(-315, 246)
+shape = SubResource("CircleShape2D_geang")
+metadata/_edit_group_ = true
