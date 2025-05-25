@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-const LADDER_SPEED = 150.0
+const LADDER_SPEED = 100.0
 const INVINCIBILITY_TIME = 0.5
+
 
 # Variables de salud
 var max_health := 100
@@ -11,7 +12,8 @@ var health := max_health
 var is_invincible := false
 
 # Movimiento por escalera
-var on_ladder := false
+var escalera := false
+var Gravity =10
 
 # Posición de respawn
 var start_position := Vector2.ZERO
@@ -21,11 +23,13 @@ func _ready() -> void:
 	update_health_label()
 
 func _physics_process(delta: float) -> void:
-	if on_ladder:
+	if escalera:
 		velocity.y = 0  # Cancelamos la gravedad en la escalera
 		if Input.is_action_pressed("ui_up"):
+			Gravity=0
 			velocity.y = -LADDER_SPEED
 		elif Input.is_action_pressed("ui_down"):
+			Gravity=0
 			velocity.y = LADDER_SPEED
 		else:
 			velocity.y = 0
@@ -39,10 +43,13 @@ func _physics_process(delta: float) -> void:
 
 	# Movimiento horizontal
 	var direction := Input.get_axis("ui_left", "ui_right")
+	
 	if direction:
+		#Gravity = 10
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 
 	move_and_slide()
 	update_health_label()

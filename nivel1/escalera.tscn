@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b43cudbblsq1p"]
+[gd_scene load_steps=4 format=3 uid="uid://b43cudbblsq1p"]
 
 [ext_resource type="Script" path="res://nivel1/escalera.gd" id="1_5405e"]
 [ext_resource type="Texture2D" uid="uid://mvgnv5svbf3x" path="res://objetosLetales/Stairs.png" id="1_xt484"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62x6x"]
+size = Vector2(349.915, 1583.3)
 
 [node name="ESCALERA" type="Area2D"]
 script = ExtResource("1_5405e")
@@ -11,10 +14,10 @@ position = Vector2(-1.52588e-05, -9.53674e-07)
 scale = Vector2(0.437671, 0.272924)
 texture = ExtResource("1_xt484")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(2.00002, -10)
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.36985, 0.102928)
 scale = Vector2(0.447936, 0.258822)
-polygon = PackedVector2Array(-185.236, -747.329, 173, -748, 169, 748, -175, 744)
+shape = SubResource("RectangleShape2D_62x6x")
 
 [node name="TopPosition" type="Marker2D" parent="."]
 position = Vector2(0, -203)
