@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bot7ors2ra3tx"]
+
+[ext_resource type="Script" path="res://objetosLetales/ratiña.gd" id="1_dp2mb"]
+[ext_resource type="Texture2D" uid="uid://dqw75xh04ru1p" path="res://objetosLetales/MARIO.png" id="2_xjup0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwdch"]
+size = Vector2(53, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_necxv"]
+size = Vector2(65, 61)
+
+[node name="ratata" type="CharacterBody2D"]
+script = ExtResource("1_dp2mb")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-17, -29)
+scale = Vector2(0.197631, 0.240132)
+texture = ExtResource("2_xjup0")
+hframes = 2
+vframes = 3
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -24)
+shape = SubResource("RectangleShape2D_gwdch")
+metadata/_edit_lock_ = true
+
+[node name="DamageArea" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+position = Vector2(-8, -24)
+shape = SubResource("RectangleShape2D_necxv")
+metadata/_edit_lock_ = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-44, -34)
+target_position = Vector2(0, 46)
