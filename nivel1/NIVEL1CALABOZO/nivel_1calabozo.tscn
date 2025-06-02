@@ -44,8 +44,8 @@ zoom = Vector2(0.65, 0.65)
 [node name="ratata" parent="." instance=ExtResource("11_bsfxo")]
 position = Vector2(399, -173)
 
-[node name="ratata" parent="ratata" instance=ExtResource("11_bsfxo")]
-position = Vector2(379, 4)
+[node name="ratata2" parent="." instance=ExtResource("11_bsfxo")]
+position = Vector2(778, -169)
 
 [node name="plataforma2" parent="." instance=ExtResource("2_82b5e")]
 position = Vector2(-77, 301)

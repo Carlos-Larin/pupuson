@@ -92,6 +92,11 @@ scale = Vector2(0.0990645, 6.83437)
 polygon = PackedVector2Array(-716.705, -640.942, 767.177, -640.503, 713, -517, -713, -519)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="."]
-position = Vector2(1718, 3854)
+position = Vector2(1642, 3848)
 scale = Vector2(0.0990645, 6.83437)
+polygon = PackedVector2Array(-716.705, -640.942, 767.177, -640.503, 713, -517, -713, -519, -713.973, -551.048, -716.168, -623.252)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="."]
+position = Vector2(1463, 1187)
+scale = Vector2(0.0990645, 2.67128)
 polygon = PackedVector2Array(-716.705, -640.942, 767.177, -640.503, 713, -517, -713, -519, -713.973, -551.048)

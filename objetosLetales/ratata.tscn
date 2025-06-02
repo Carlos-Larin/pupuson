@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bot7ors2ra3tx"]
+[gd_scene load_steps=7 format=3 uid="uid://bot7ors2ra3tx"]
 
 [ext_resource type="Script" path="res://objetosLetales/ratiña.gd" id="1_dp2mb"]
 [ext_resource type="Texture2D" uid="uid://dqw75xh04ru1p" path="res://objetosLetales/MARIO.png" id="2_xjup0"]
@@ -8,6 +8,14 @@ size = Vector2(53, 52)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_necxv"]
 size = Vector2(65, 61)
+
+[sub_resource type="Animation" id="Animation_c0ph0"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ybag7"]
+_data = {
+"idle": SubResource("Animation_c0ph0")
+}
 
 [node name="ratata" type="CharacterBody2D"]
 script = ExtResource("1_dp2mb")
@@ -37,3 +45,8 @@ metadata/_edit_lock_ = true
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-44, -34)
 target_position = Vector2(0, 46)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ybag7")
+}
