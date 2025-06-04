@@ -42,10 +42,10 @@ position = Vector2(-648, 196)
 zoom = Vector2(0.65, 0.65)
 
 [node name="ratata" parent="." instance=ExtResource("11_bsfxo")]
-position = Vector2(399, -173)
+position = Vector2(395, -161)
 
 [node name="ratata2" parent="." instance=ExtResource("11_bsfxo")]
-position = Vector2(778, -169)
+position = Vector2(772, -160)
 
 [node name="plataforma2" parent="." instance=ExtResource("2_82b5e")]
 position = Vector2(-77, 301)
@@ -131,7 +131,6 @@ shape = SubResource("RectangleShape2D_jlywk")
 [node name="espinas2" type="Area2D" parent="espinas"]
 position = Vector2(1360, -1276)
 rotation = 1.55396
-scale = Vector2(1, 1)
 script = ExtResource("7_fwtw0")
 metadata/_edit_group_ = true
 
@@ -149,7 +148,6 @@ metadata/_edit_group_ = true
 [node name="espinas3" type="Area2D" parent="espinas"]
 position = Vector2(1814, -125)
 rotation = 3.10792
-scale = Vector2(1, 1)
 script = ExtResource("7_fwtw0")
 metadata/_edit_group_ = true
 
@@ -184,7 +182,6 @@ metadata/_edit_group_ = true
 [node name="espinas5" type="Area2D" parent="espinas"]
 position = Vector2(955, -168)
 rotation = 3.08029
-scale = Vector2(1, 1)
 script = ExtResource("7_fwtw0")
 metadata/_edit_group_ = true
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bot7ors2ra3tx"]
+[gd_scene load_steps=9 format=3 uid="uid://bot7ors2ra3tx"]
 
 [ext_resource type="Script" path="res://objetosLetales/ratiña.gd" id="1_dp2mb"]
 [ext_resource type="Texture2D" uid="uid://dqw75xh04ru1p" path="res://objetosLetales/MARIO.png" id="2_xjup0"]
@@ -11,10 +11,79 @@ size = Vector2(65, 61)
 
 [sub_resource type="Animation" id="Animation_c0ph0"]
 resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8bag8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_rfgyq"]
+resource_name = "walk"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 1, 1.5, 1.86667, 2.2, 2.46667, 2.86667),
+"transitions": PackedFloat32Array(20.393, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 2, 2, 2, 2, 2, 2, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame_coords")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 2)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ybag7"]
 _data = {
-"idle": SubResource("Animation_c0ph0")
+"RESET": SubResource("Animation_8bag8"),
+"idle": SubResource("Animation_c0ph0"),
+"walk": SubResource("Animation_rfgyq")
 }
 
 [node name="ratata" type="CharacterBody2D"]
@@ -27,6 +96,7 @@ scale = Vector2(0.197631, 0.240132)
 texture = ExtResource("2_xjup0")
 hframes = 2
 vframes = 3
+frame = 4
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -42,9 +112,9 @@ position = Vector2(-8, -24)
 shape = SubResource("RectangleShape2D_necxv")
 metadata/_edit_lock_ = true
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="EdgeRayCast" type="RayCast2D" parent="."]
 position = Vector2(-44, -34)
-target_position = Vector2(0, 46)
+target_position = Vector2(-1, 41)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

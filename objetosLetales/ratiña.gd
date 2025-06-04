@@ -11,6 +11,9 @@ var direction := -1
 var bodies_in_contact := []
 var _timer := 0.0
 
+@onready var animationPlayer = $AnimationPlayer
+@onready var edge_raycast = $EdgeRayCast
+
 func _ready():
 	var damage_area = $DamageArea
 	if damage_area:
@@ -18,9 +21,13 @@ func _ready():
 		damage_area.connect("body_exited", _on_body_exited)
 
 func _physics_process(delta: float) -> void:
-	# Movimiento simple hacia izquierda/derecha
+	# Movimiento
 	velocity.x = direction * speed
+	animationPlayer.play("walk")
 	move_and_slide()
+
+	# Voltear sprite
+	$Sprite2D.flip_h = direction > 1
 
 	# Daño continuo
 	_timer += delta
@@ -28,22 +35,29 @@ func _physics_process(delta: float) -> void:
 		_timer = 0.0
 		_apply_damage_to_bodies()
 
-	# Cambio de dirección al chocar (opcional)
-	if is_on_wall():
+	# Si choca contra la pared o se va a caer
+	if is_on_wall() or not edge_raycast.is_colliding():
+		animationPlayer.play("idle")
 		_turn_around()
 
 func _turn_around():
 	direction *= -1
 	$Sprite2D.flip_h = direction > 0
+	# Invertir posición del raycast
+	edge_raycast.position.x *= -1
 
 func _on_body_entered(body: Node):
 	if not is_instance_valid(body):
 		return
 
+	# Ignorar otras ratas (mismo tipo de enemigo)
+	if body is CharacterBody2D and body.has_method("take_damage") == false:
+		return
+
 	if body.has_method("take_damage"):
 		body.take_damage(damage_on_contact)
 
-		# Empuje vertical
+		# Empuje
 		if body is CharacterBody2D:
 			body.velocity.y = -bounce_force
 
