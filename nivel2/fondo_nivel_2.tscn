@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvhdbrj33bbue"]
+
+[ext_resource type="Texture2D" uid="uid://jjyg287il8kl" path="res://nivel2/cieloazul.jpg" id="1_b8heh"]
+[ext_resource type="Texture2D" uid="uid://ci7n8yqep52aa" path="res://nivel2/sueloExter.png" id="2_ngccw"]
+
+[node name="fondoNivel2" type="StaticBody2D"]
+
+[node name="Cieloazul" type="Sprite2D" parent="."]
+position = Vector2(-295, -148)
+texture = ExtResource("1_b8heh")
+
+[node name="Cieloazul" type="Sprite2D" parent="Cieloazul"]
+position = Vector2(583, 1)
+texture = ExtResource("1_b8heh")
+
+[node name="Cieloazul2" type="Sprite2D" parent="Cieloazul/Cieloazul"]
+position = Vector2(588, -1)
+texture = ExtResource("1_b8heh")
+
+[node name="Cieloazul" type="Sprite2D" parent="Cieloazul/Cieloazul/Cieloazul2"]
+position = Vector2(589, 0)
+texture = ExtResource("1_b8heh")
+
+[node name="suelo" type="StaticBody2D" parent="."]
+position = Vector2(-378, 62)
+scale = Vector2(0.504728, 0.581356)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo"]
+position = Vector2(1.98126, 6.88046)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
+
+[node name="suelo2" type="StaticBody2D" parent="."]
+position = Vector2(40, 63)
+scale = Vector2(0.504728, 0.581356)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo2"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo2"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-504.595, -168.919)
+scale = Vector2(0.204379, 1.1871)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)

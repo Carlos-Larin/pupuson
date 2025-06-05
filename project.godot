@@ -25,7 +25,8 @@ window/stretch/scale=4.0
 [file_customization]
 
 folder_colors={
-"res://nivel1/": "green"
+"res://nivel1/": "green",
+"res://nivel2/": "yellow"
 }
 
 [input]

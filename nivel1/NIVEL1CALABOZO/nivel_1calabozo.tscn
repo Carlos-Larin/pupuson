@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://dfpw73xswoqvn"]
+[gd_scene load_steps=15 format=3 uid="uid://dfpw73xswoqvn"]
 
 [ext_resource type="PackedScene" uid="uid://dnty6kgpa6u0y" path="res://nivel1/fondoEsceario.tscn" id="1_40m08"]
 [ext_resource type="PackedScene" uid="uid://dh5m3a8q2w7tr" path="res://nivel1/lavadaña.tscn" id="2_6wniq"]
 [ext_resource type="PackedScene" uid="uid://ng1wpavv2rc5" path="res://nivel1/plataforma.tscn" id="2_82b5e"]
 [ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="4_6jopt"]
+[ext_resource type="PackedScene" uid="uid://dhe7vapkbxbvd" path="res://nivel1/puerta_nv_2.tscn" id="4_t4oot"]
 [ext_resource type="PackedScene" uid="uid://b43cudbblsq1p" path="res://nivel1/escalera.tscn" id="5_3pl7a"]
-[ext_resource type="PackedScene" uid="uid://6hgflq6q1fm8" path="res://nivel1/plataformaALTA.tscn" id="6_6vk2o"]
 [ext_resource type="Script" path="res://nivel1/NIVEL1CALABOZO/espinas.gd" id="7_fwtw0"]
+[ext_resource type="PackedScene" uid="uid://djx7quo82u140" path="res://nivel1/laLargahu.tscn" id="7_i6eyb"]
 [ext_resource type="Texture2D" uid="uid://7jqfdc3xqlvi" path="res://objetosLetales/puas.png" id="8_lg117"]
 [ext_resource type="Script" path="res://nivel1/NIVEL1CALABOZO/remolino.gd" id="9_bw5cg"]
 [ext_resource type="Texture2D" uid="uid://dcy8pa46p2c3c" path="res://objetosLetales/remolino2.png" id="10_m6sr0"]
@@ -35,17 +36,23 @@ scale = Vector2(1.4496, 1.34805)
 [node name="ESCALERA" parent="." instance=ExtResource("5_3pl7a")]
 position = Vector2(1444, 45)
 
+[node name="puertaNv2" parent="." instance=ExtResource("4_t4oot")]
+position = Vector2(-621, -261)
+
 [node name="player1" parent="." instance=ExtResource("4_6jopt")]
 position = Vector2(-648, 196)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.65, 0.65)
 
-[node name="ratata" parent="." instance=ExtResource("11_bsfxo")]
-position = Vector2(395, -161)
-
 [node name="ratata2" parent="." instance=ExtResource("11_bsfxo")]
-position = Vector2(772, -160)
+position = Vector2(795, -171)
+
+[node name="ratata3" parent="." instance=ExtResource("11_bsfxo")]
+position = Vector2(-331, -174)
+
+[node name="grama" parent="." instance=ExtResource("7_i6eyb")]
+position = Vector2(-655, -157)
 
 [node name="plataforma2" parent="." instance=ExtResource("2_82b5e")]
 position = Vector2(-77, 301)
@@ -75,29 +82,91 @@ scale = Vector2(1.50384, 3.36942)
 position = Vector2(1059, 290)
 scale = Vector2(2.36946, 2.23468)
 
-[node name="StaticBody2D" parent="." instance=ExtResource("6_6vk2o")]
-position = Vector2(1110, -142)
+[node name="espinasHorizontal" type="Area2D" parent="."]
+position = Vector2(297, -373)
+scale = Vector2(0.794497, 0.906747)
+script = ExtResource("7_fwtw0")
+metadata/_edit_group_ = true
 
-[node name="StaticBody2D2" parent="StaticBody2D" instance=ExtResource("6_6vk2o")]
-position = Vector2(-294, 0)
+[node name="Sprite2D" type="Sprite2D" parent="espinasHorizontal"]
+position = Vector2(998.5, 194.125)
+scale = Vector2(0.302876, 0.212591)
+texture = ExtResource("8_lg117")
 
-[node name="StaticBody2D3" parent="StaticBody2D/StaticBody2D2" instance=ExtResource("6_6vk2o")]
-position = Vector2(-298, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espinasHorizontal"]
+position = Vector2(1000.5, 191.5)
+shape = SubResource("RectangleShape2D_jlywk")
 
-[node name="StaticBody2D4" parent="StaticBody2D/StaticBody2D2/StaticBody2D3" instance=ExtResource("6_6vk2o")]
-position = Vector2(-299, 0)
+[node name="espinas2" type="Area2D" parent="."]
+position = Vector2(1355, -1268)
+rotation = 1.55396
+scale = Vector2(1, 1)
+script = ExtResource("7_fwtw0")
+metadata/_edit_group_ = true
 
-[node name="StaticBody2D5" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4" instance=ExtResource("6_6vk2o")]
-position = Vector2(-298, 1)
+[node name="Sprite2D" type="Sprite2D" parent="espinas2"]
+position = Vector2(1234, 23)
+scale = Vector2(0.302876, 0.212591)
+texture = ExtResource("8_lg117")
+metadata/_edit_group_ = true
 
-[node name="StaticBody2D6" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5" instance=ExtResource("6_6vk2o")]
-position = Vector2(-288, -2)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas2"]
+position = Vector2(1236, 23)
+shape = SubResource("RectangleShape2D_jlywk")
+metadata/_edit_group_ = true
 
-[node name="StaticBody2D7" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5/StaticBody2D6" instance=ExtResource("6_6vk2o")]
-position = Vector2(-296, 2)
+[node name="espinas3" type="Area2D" parent="."]
+position = Vector2(1851, -81)
+rotation = 3.10792
+scale = Vector2(1, 1)
+script = ExtResource("7_fwtw0")
+metadata/_edit_group_ = true
 
-[node name="StaticBody2D8" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4/StaticBody2D5/StaticBody2D6/StaticBody2D7" instance=ExtResource("6_6vk2o")]
-position = Vector2(-287, 2)
+[node name="Sprite2D" type="Sprite2D" parent="espinas3"]
+position = Vector2(1234, 23)
+scale = Vector2(0.302876, 0.212591)
+texture = ExtResource("8_lg117")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas3"]
+position = Vector2(1236, 23)
+shape = SubResource("RectangleShape2D_jlywk")
+metadata/_edit_group_ = true
+
+[node name="espinas4" type="Area2D" parent="."]
+position = Vector2(1531, 1383)
+rotation = -1.60145
+script = ExtResource("7_fwtw0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="espinas4"]
+position = Vector2(1234, 23)
+scale = Vector2(0.302876, 0.212591)
+texture = ExtResource("8_lg117")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas4"]
+position = Vector2(1236, 23)
+shape = SubResource("RectangleShape2D_jlywk")
+metadata/_edit_group_ = true
+
+[node name="espinas5" type="Area2D" parent="."]
+position = Vector2(874, -136)
+rotation = 3.08029
+scale = Vector2(1, 1)
+script = ExtResource("7_fwtw0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="espinas5"]
+position = Vector2(1234, 23)
+scale = Vector2(0.302876, 0.212591)
+texture = ExtResource("8_lg117")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas5"]
+position = Vector2(1236, 23)
+shape = SubResource("RectangleShape2D_jlywk")
+metadata/_edit_group_ = true
 
 [node name="espinas" type="Area2D" parent="."]
 position = Vector2(-5, 8)
@@ -113,101 +182,18 @@ texture = ExtResource("8_lg117")
 position = Vector2(1000.5, 191.5)
 shape = SubResource("RectangleShape2D_jlywk")
 
-[node name="espinasHorizontal" type="Area2D" parent="espinas"]
-position = Vector2(240, -360)
-scale = Vector2(0.794497, 0.906747)
-script = ExtResource("7_fwtw0")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="espinas/espinasHorizontal"]
-position = Vector2(998.5, 194.125)
-scale = Vector2(0.302876, 0.212591)
-texture = ExtResource("8_lg117")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas/espinasHorizontal"]
-position = Vector2(1000.5, 191.5)
-shape = SubResource("RectangleShape2D_jlywk")
-
-[node name="espinas2" type="Area2D" parent="espinas"]
-position = Vector2(1360, -1276)
-rotation = 1.55396
-script = ExtResource("7_fwtw0")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="espinas/espinas2"]
-position = Vector2(1234, 23)
-scale = Vector2(0.302876, 0.212591)
-texture = ExtResource("8_lg117")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas/espinas2"]
-position = Vector2(1236, 23)
-shape = SubResource("RectangleShape2D_jlywk")
-metadata/_edit_group_ = true
-
-[node name="espinas3" type="Area2D" parent="espinas"]
-position = Vector2(1814, -125)
-rotation = 3.10792
-script = ExtResource("7_fwtw0")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="espinas/espinas3"]
-position = Vector2(1234, 23)
-scale = Vector2(0.302876, 0.212591)
-texture = ExtResource("8_lg117")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas/espinas3"]
-position = Vector2(1236, 23)
-shape = SubResource("RectangleShape2D_jlywk")
-metadata/_edit_group_ = true
-
-[node name="espinas4" type="Area2D" parent="espinas"]
-position = Vector2(1536, 1375)
-rotation = -1.60145
-script = ExtResource("7_fwtw0")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="espinas/espinas4"]
-position = Vector2(1234, 23)
-scale = Vector2(0.302876, 0.212591)
-texture = ExtResource("8_lg117")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas/espinas4"]
-position = Vector2(1236, 23)
-shape = SubResource("RectangleShape2D_jlywk")
-metadata/_edit_group_ = true
-
-[node name="espinas5" type="Area2D" parent="espinas"]
-position = Vector2(955, -168)
-rotation = 3.08029
-script = ExtResource("7_fwtw0")
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="espinas/espinas5"]
-position = Vector2(1234, 23)
-scale = Vector2(0.302876, 0.212591)
-texture = ExtResource("8_lg117")
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas/espinas5"]
-position = Vector2(1236, 23)
-shape = SubResource("RectangleShape2D_jlywk")
-metadata/_edit_group_ = true
-
-[node name="remolino" type="Area2D" parent="espinas"]
-position = Vector2(740, -116)
+[node name="remolino" type="Area2D" parent="."]
+position = Vector2(735, -108)
 script = ExtResource("9_bw5cg")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="espinas/remolino"]
+[node name="Sprite2D" type="Sprite2D" parent="remolino"]
 position = Vector2(-316, 249)
 scale = Vector2(0.284228, 0.285988)
 texture = ExtResource("10_m6sr0")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="espinas/remolino"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="remolino"]
 position = Vector2(-315, 246)
 shape = SubResource("CircleShape2D_geang")
 metadata/_edit_group_ = true

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://djx7quo82u140"]
+
+[ext_resource type="Texture2D" uid="uid://b7tyblh8ycqfd" path="res://nivel1/suelo.jpg" id="1_vneum"]
+
+[node name="grama" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(496.862, 32.8014)
+scale = Vector2(6.64918, 1.41026)
+polygon = PackedVector2Array(69.6534, 24.9589, 218.845, 26.3771, 218.845, -36.0226, -78.7859, -38.1498, -79.6883, 19.9953)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(186, 22)
+scale = Vector2(3.85435, 1.36719)
+texture = ExtResource("1_vneum")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(109.227, 0.731429)
+scale = Vector2(0.945291, 1.01645)
+texture = ExtResource("1_vneum")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D"]
+position = Vector2(108.687, 0.719591)
+scale = Vector2(0.945291, 1.01645)
+texture = ExtResource("1_vneum")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D"]
+position = Vector2(111.595, 0.936429)
+scale = Vector2(0.945291, 1.01645)
+texture = ExtResource("1_vneum")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D"]
+position = Vector2(111.595, 0.936429)
+scale = Vector2(0.945291, 1.01645)
+texture = ExtResource("1_vneum")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D"]
+position = Vector2(72.5242, 0.936429)
+scale = Vector2(0.265802, 1.01645)
+texture = ExtResource("1_vneum")
