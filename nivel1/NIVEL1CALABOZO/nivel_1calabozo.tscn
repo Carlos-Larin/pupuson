@@ -37,7 +37,7 @@ scale = Vector2(1.4496, 1.34805)
 position = Vector2(1444, 45)
 
 [node name="puertaNv2" parent="." instance=ExtResource("4_t4oot")]
-position = Vector2(-621, -261)
+position = Vector2(-612, -268)
 
 [node name="player1" parent="." instance=ExtResource("4_6jopt")]
 position = Vector2(-648, 196)
@@ -100,7 +100,6 @@ shape = SubResource("RectangleShape2D_jlywk")
 [node name="espinas2" type="Area2D" parent="."]
 position = Vector2(1355, -1268)
 rotation = 1.55396
-scale = Vector2(1, 1)
 script = ExtResource("7_fwtw0")
 metadata/_edit_group_ = true
 
@@ -118,7 +117,6 @@ metadata/_edit_group_ = true
 [node name="espinas3" type="Area2D" parent="."]
 position = Vector2(1851, -81)
 rotation = 3.10792
-scale = Vector2(1, 1)
 script = ExtResource("7_fwtw0")
 metadata/_edit_group_ = true
 
@@ -153,7 +151,6 @@ metadata/_edit_group_ = true
 [node name="espinas5" type="Area2D" parent="."]
 position = Vector2(874, -136)
 rotation = 3.08029
-scale = Vector2(1, 1)
 script = ExtResource("7_fwtw0")
 metadata/_edit_group_ = true
 
