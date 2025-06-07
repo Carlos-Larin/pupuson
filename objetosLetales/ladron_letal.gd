@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var velocidad_disparo: float = 150.0
 @export var rango_vision: float = 300.0
+@export var distancia_muzzle: float = 20.0
 
 const Bala = preload("res://objetosLetales/bala.tscn")
 

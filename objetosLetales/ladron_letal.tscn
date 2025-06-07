@@ -48,6 +48,9 @@ animation = &"ladronAtaca"
 frame = 1
 frame_progress = 0.105965
 
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(27, -11)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-11.625, 4.4375)
 shape = SubResource("RectangleShape2D_q4wd5")
@@ -56,6 +59,3 @@ shape = SubResource("RectangleShape2D_q4wd5")
 target_position = Vector2(0, 61)
 
 [node name="ShootTimer" type="Timer" parent="."]
-
-[node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(27, -11)

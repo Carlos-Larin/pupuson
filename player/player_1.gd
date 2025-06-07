@@ -9,7 +9,7 @@ const INVINCIBILITY_TIME = 0.5
 const maxjump = 1
 var salto = 0
 var suelo = true
-var jump_doble = 320
+var jump_doble = 620
 
 # Salud
 var max_health := 100

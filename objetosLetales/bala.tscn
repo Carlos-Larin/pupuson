@@ -59,3 +59,5 @@ frame_progress = 0.182041
 [node name="LifeTimer" type="Timer" parent="."]
 
 [node name="DestructionTimer" type="Timer" parent="."]
+
+[node name="DisparoAudio" type="AudioStreamPlayer2D" parent="."]
