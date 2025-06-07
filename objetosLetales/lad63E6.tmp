@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://hsrnudoqxp3n"]
+
+[ext_resource type="Texture2D" uid="uid://dsyrqh5wqxmjc" path="res://objetosLetales/ladronLetal.png" id="1_6wflq"]
+[ext_resource type="Script" path="res://objetosLetales/ladron_letal.gd" id="1_h1hok"]
+[ext_resource type="Texture2D" uid="uid://caqxobgx0231m" path="res://objetosLetales/ladronSinFondo.png" id="2_yprrs"]
+[ext_resource type="PackedScene" uid="uid://dc4wdhroqqydo" path="res://DECORATIVOS/arbol1.tscn" id="4_occcq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb88x"]
+atlas = ExtResource("1_6wflq")
+region = Rect2(0, 30, 216, 348)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdqhd"]
+atlas = ExtResource("1_6wflq")
+region = Rect2(216, 30, 216, 348)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lpnb"]
+atlas = ExtResource("2_yprrs")
+region = Rect2(390, 128, 195, 280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22tcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb88x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdqhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lpnb")
+}],
+"loop": true,
+"name": &"ladronAtaca",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4wd5"]
+size = Vector2(65.25, 116.875)
+
+[node name="LadronLetal" type="CharacterBody2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_h1hok")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999996, 1)
+scale = Vector2(0.372685, 0.364943)
+sprite_frames = SubResource("SpriteFrames_22tcy")
+animation = &"ladronAtaca"
+frame = 1
+frame_progress = 0.105965
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-11.625, 4.4375)
+shape = SubResource("RectangleShape2D_q4wd5")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(52, -11)
+
+[node name="arbol" parent="Muzzle" instance=ExtResource("4_occcq")]
+position = Vector2(323, -107)
+
+[node name="detectorJugador" type="RayCast2D" parent="."]
+target_position = Vector2(168, 1)
+
+[node name="ShootTimer" type="Timer" parent="."]

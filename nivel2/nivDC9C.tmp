@@ -7,14 +7,13 @@
 [node name="nivel2_exterior" type="Node2D"]
 
 [node name="fondoNivel2" parent="." instance=ExtResource("1_mfe4q")]
-position = Vector2(-111, -20)
+position = Vector2(-127, -10)
 
 [node name="LadronLetal" parent="." instance=ExtResource("3_youbk")]
-position = Vector2(1271, -72)
+position = Vector2(-332, -71)
 
 [node name="player1" parent="." instance=ExtResource("2_txn1v")]
-position = Vector2(-498, -74)
+position = Vector2(-500, -69)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
-position = Vector2(7, 5)
 zoom = Vector2(0.65, 0.65)

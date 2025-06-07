@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://objetosLetales/bala.gd" id="1_xnign"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sboyy"]
-radius = 4.99986
-height = 29.9992
+radius = 2.99251
+height = 19.9995
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3g0h"]
 atlas = ExtResource("1_xaq4i")
@@ -43,7 +43,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Bala" type="Area2D"]
+[node name="bala" type="Area2D"]
 script = ExtResource("1_xnign")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -51,6 +51,11 @@ rotation = 1.57821
 shape = SubResource("CapsuleShape2D_sboyy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.382867, 0.443548)
+position = Vector2(-9.53674e-07, -4.76837e-07)
+scale = Vector2(0.247378, 0.275538)
 sprite_frames = SubResource("SpriteFrames_pjhrm")
-frame_progress = 0.389901
+frame_progress = 0.182041
+
+[node name="LifeTimer" type="Timer" parent="."]
+
+[node name="DestructionTimer" type="Timer" parent="."]

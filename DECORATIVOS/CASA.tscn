@@ -1,16 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2h0lwxoept25"]
+[gd_scene load_steps=2 format=3 uid="uid://c2h0lwxoept25"]
 
-[ext_resource type="Texture2D" uid="uid://drmdl6wey3k3h" path="res://imagenes/casa_campoPNG.png" id="1_jppfb"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_51ngp"]
-size = Vector2(349, 112)
+[ext_resource type="Texture2D" uid="uid://drmdl6wey3k3h" path="res://imagenes/acto1/casa_campoPNG.png" id="1_jppfb"]
 
 [node name="Casa" type="Node2D"]
 position = Vector2(-434, -16)
 
 [node name="CasaCampoPng2" type="Sprite2D" parent="."]
-position = Vector2(332, 15)
-scale = Vector2(0.2775, 0.2705)
+position = Vector2(356.813, 2.3125)
+scale = Vector2(0.37675, 0.32125)
 texture = ExtResource("1_jppfb")
 
 [node name="CasaCampoPng2" type="Sprite2D" parent="CasaCampoPng2"]
@@ -18,13 +15,7 @@ position = Vector2(367.568, 3.69685)
 scale = Vector2(0.955862, 0.991839)
 texture = ExtResource("1_jppfb")
 
-[node name="CasaCampoPng3" type="Sprite2D" parent="."]
-position = Vector2(544, 16)
-scale = Vector2(0.2775, 0.2705)
+[node name="CasaCampoPng3" type="Sprite2D" parent="CasaCampoPng2/CasaCampoPng2"]
+position = Vector2(414.7, 7.55354e-06)
+scale = Vector2(1.04618, 1.00823)
 texture = ExtResource("1_jppfb")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(436.5, 21)
-shape = SubResource("RectangleShape2D_51ngp")

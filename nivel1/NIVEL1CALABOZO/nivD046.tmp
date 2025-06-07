@@ -40,13 +40,16 @@ position = Vector2(1444, 45)
 position = Vector2(-612, -268)
 
 [node name="player1" parent="." instance=ExtResource("4_6jopt")]
-position = Vector2(-636, 184)
+position = Vector2(-648, 196)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 zoom = Vector2(0.65, 0.65)
 
+[node name="ratata2" parent="." instance=ExtResource("11_bsfxo")]
+position = Vector2(795, -171)
+
 [node name="ratata3" parent="." instance=ExtResource("11_bsfxo")]
-position = Vector2(218, -193)
+position = Vector2(-331, -174)
 
 [node name="grama" parent="." instance=ExtResource("7_i6eyb")]
 position = Vector2(-655, -157)

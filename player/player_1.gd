@@ -5,18 +5,18 @@ const JUMP_VELOCITY = -400.0
 const LADDER_SPEED = 100.0
 const INVINCIBILITY_TIME = 0.5
 
-# para el doble salto
+# Doble salto
 const maxjump = 1
 var salto = 0
 var suelo = true
 var jump_doble = 320
 
-# Variables de salud
+# Salud
 var max_health := 100
 var health := max_health
 var is_invincible := false
 
-# Movimiento por escalera
+# Escalera
 var escalera := false
 var Gravity = 10
 
@@ -64,6 +64,19 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_health_bar()
 
+	# --------- ANIMACIÓN CON AnimationPlayer ----------
+	var sprite = $Sprite2D  # Cambiá si tu Sprite tiene otro nombre
+	var animator = $AnimationPlayer
+
+	if direction != 0:
+		sprite.scale.x = 1 if direction > 0 else -1
+
+		if not animator.is_playing():
+			animator.play("walkingPeople")
+	else:
+		if animator.is_playing():
+			animator.stop()
+
 func take_damage(amount: int) -> void:
 	if is_invincible:
 		return
@@ -91,7 +104,6 @@ func update_health_bar() -> void:
 	bar.max_value = max_health
 	bar.value = health
 
-	# Estilo de relleno (color)
 	var fill_style = StyleBoxFlat.new()
 	if health >= 80:
 		fill_style.bg_color = Color(0.0, 1.0, 0.0)  # verde
@@ -104,6 +116,4 @@ func update_health_bar() -> void:
 
 	fill_style.set_content_margin_all(2)
 	bar.add_theme_stylebox_override("fill", fill_style)
-
-	# Hacer la barra más delgada
 	bar.custom_minimum_size = Vector2(0, 16)

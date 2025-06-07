@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvhdbrj33bbue"]
+[gd_scene load_steps=12 format=3 uid="uid://dvhdbrj33bbue"]
 
 [ext_resource type="Texture2D" uid="uid://jjyg287il8kl" path="res://nivel2/cieloazul.jpg" id="1_b8heh"]
 [ext_resource type="Texture2D" uid="uid://ci7n8yqep52aa" path="res://nivel2/sueloExter.png" id="2_ngccw"]
 [ext_resource type="Texture2D" uid="uid://dtrvmu5jybbns" path="res://nivel2/la calle.jpeg" id="2_rydno"]
 [ext_resource type="PackedScene" uid="uid://dclmha6f3bhjr" path="res://DECORATIVOS/cantina.tscn" id="3_r5bk8"]
 [ext_resource type="PackedScene" uid="uid://dpltlcf6in0vk" path="res://DECORATIVOS/casa2.tscn" id="4_3af4q"]
+[ext_resource type="PackedScene" uid="uid://dc4wdhroqqydo" path="res://DECORATIVOS/arbol1.tscn" id="4_hgbxn"]
 [ext_resource type="PackedScene" uid="uid://583hs3421rgr" path="res://DECORATIVOS/mercadon.tscn" id="5_l4165"]
 [ext_resource type="PackedScene" uid="uid://dbu7vxu4ptiyp" path="res://nivel2/decoracionNV2/disturbio_camara.tscn" id="6_hm7oe"]
 [ext_resource type="PackedScene" uid="uid://bk87rnrplwdng" path="res://nivel2/decoracionNV2/oficial.tscn" id="8_pccs1"]
+[ext_resource type="PackedScene" uid="uid://c2h0lwxoept25" path="res://DECORATIVOS/CASA.tscn" id="9_0yt6j"]
+[ext_resource type="PackedScene" uid="uid://dkuhologpnmvy" path="res://DECORATIVOS/arbusto.tscn" id="11_e70ir"]
 
 [node name="fondoNivel2" type="StaticBody2D"]
 
@@ -92,7 +95,7 @@ texture = ExtResource("2_ngccw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo5"]
 position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 348.703, -116.968, -441.822, -103.207)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 356.628, -99.7668, -441.822, -103.207)
 
 [node name="suelo6" type="StaticBody2D" parent="suelo"]
 position = Vector2(4184.43, -1.72012)
@@ -103,7 +106,7 @@ texture = ExtResource("2_ngccw")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo6"]
 position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -493.335, -110.087)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -481.447, -94.6064)
 
 [node name="suelo7" type="StaticBody2D" parent="suelo"]
 position = Vector2(5016.56, 1.72012)
@@ -170,14 +173,42 @@ offset_bottom = -152.0
 text = "Darle flecha ----> para caminar en esa direccion.
 Toca: \"E\" para hablar con los pobladores."
 
+[node name="movimeinto2" type="TextEdit" parent="."]
+offset_left = -320.0
+offset_top = 30.0
+offset_right = -92.0
+offset_bottom = 73.0
+text = "Entrando al pueblo de TRC..."
+
+[node name="Arbusto" parent="." instance=ExtResource("11_e70ir")]
+position = Vector2(-333, -36)
+
+[node name="Arbusto2" parent="." instance=ExtResource("11_e70ir")]
+position = Vector2(-591, -33)
+
+[node name="Arbusto3" parent="." instance=ExtResource("11_e70ir")]
+position = Vector2(-848, -37)
+
+[node name="Arbusto4" parent="." instance=ExtResource("11_e70ir")]
+position = Vector2(-86, -37)
+
+[node name="arbol" parent="." instance=ExtResource("4_hgbxn")]
+position = Vector2(328, -113)
+
+[node name="arbol2" parent="." instance=ExtResource("4_hgbxn")]
+position = Vector2(-14, -106)
+
+[node name="Casa" parent="." instance=ExtResource("9_0yt6j")]
+position = Vector2(551, -167)
+
 [node name="Cantina" parent="." instance=ExtResource("3_r5bk8")]
 position = Vector2(149, -147)
 
 [node name="Casa2" parent="." instance=ExtResource("4_3af4q")]
-position = Vector2(496, -121)
+position = Vector2(498, -124)
 
 [node name="Mercadon" parent="." instance=ExtResource("5_l4165")]
-position = Vector2(1370, -153)
+position = Vector2(1383, -149)
 
 [node name="oficial" parent="." instance=ExtResource("8_pccs1")]
 position = Vector2(827, -67)
