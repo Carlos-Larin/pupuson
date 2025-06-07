@@ -161,7 +161,7 @@ scale = Vector2(0.204379, 1.1871)
 polygon = PackedVector2Array(-388.517, 149.035, 418.047, 142.77, 477.519, -286.48, -423.991, -108.367)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
-position = Vector2(2340, -172)
+position = Vector2(3004, -174)
 scale = Vector2(0.204379, 1.1871)
 polygon = PackedVector2Array(-388.517, 149.035, 418.047, 142.77, 477.519, -286.48, -423.991, -108.367)
 
