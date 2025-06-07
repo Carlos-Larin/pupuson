@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk87rnrplwdng"]
+
+[ext_resource type="Texture2D" uid="uid://bsv0i61hma0oo" path="res://nivel2/PNCSinFondo.png" id="1_edvxp"]
+[ext_resource type="Script" path="res://nivel2/decoracionNV2/oficial.gd" id="1_vd3eq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0v2ra"]
+size = Vector2(167, 135)
+
+[node name="oficial" type="Area2D"]
+script = ExtResource("1_vd3eq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 3)
+scale = Vector2(0.32, 0.316)
+texture = ExtResource("1_edvxp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.5, 5.5)
+shape = SubResource("RectangleShape2D_0v2ra")
+
+[node name="HablarOficial" type="TextEdit" parent="."]
+visible = false
+offset_left = -178.0
+offset_top = 87.0
+offset_right = 195.0
+offset_bottom = 162.0
+text = "tu: oficial ¿como puedo pasar?.
+Agente: solo que pases por los techos cipote."

@@ -1,17 +1,18 @@
 [gd_scene load_steps=2 format=3 uid="uid://583hs3421rgr"]
 
-[ext_resource type="Texture2D" uid="uid://d0rirqikk41vj" path="res://imagenes/superMercadon.png" id="1_bxvhy"]
+[ext_resource type="Texture2D" uid="uid://d0rirqikk41vj" path="res://imagenes/acto1/superMercadon.png" id="1_bxvhy"]
 
 [node name="Mercadon" type="Node2D"]
 
 [node name="SuperMercadon" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, 0)
-scale = Vector2(0.308802, 0.283537)
+scale = Vector2(0.745208, 0.636052)
 texture = ExtResource("1_bxvhy")
+metadata/_edit_group_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="SuperMercadon"]
 position = Vector2(0, -8.45419e-06)
 scale = Vector2(4.64605, 4.43243)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SuperMercadon/StaticBody2D"]
-polygon = PackedVector2Array(-55, -42, -54, 56, -13, 54, -10, 3, 11, 4, 13, 54, 54, 56, 54, -43)
+polygon = PackedVector2Array(-50.8814, -2.38709, -51.5784, -7.16128, -45.3053, -19.8925, 44.6083, -19.8925, 51.5784, -7.95698, 51.5784, -1.59139, 49.4874, 1.90735e-06, -48.7904, 1.90735e-06)

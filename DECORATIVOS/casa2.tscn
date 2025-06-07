@@ -1,17 +1,15 @@
 [gd_scene load_steps=2 format=3 uid="uid://dpltlcf6in0vk"]
 
-[ext_resource type="Texture2D" uid="uid://dsey8o4vc82sq" path="res://imagenes/casa_colonial_2PNG.png" id="1_uvsfp"]
+[ext_resource type="Texture2D" uid="uid://dsey8o4vc82sq" path="res://imagenes/acto1/casa_colonial_2PNG.png" id="1_uvsfp"]
 
 [node name="Casa2" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CasaColonial2png" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1, 1)
-scale = Vector2(0.421, 0.315)
+position = Vector2(105.938, -89.5625)
+scale = Vector2(1.18025, 0.90975)
 texture = ExtResource("1_uvsfp")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/CasaColonial2png"]
-position = Vector2(-2.3753, -3.1746)
-scale = Vector2(2.3753, 3.1746)
-polygon = PackedVector2Array(-44, 75, -105, 73, -106, -67, 104, -65, 106, 73, -6, 75, -5, 34, -45, 32)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-189, -17, -191, -37, -141, -65, 337, -66, 390, -19, 280, -11)

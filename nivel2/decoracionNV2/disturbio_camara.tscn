@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbu7vxu4ptiyp"]
+
+[ext_resource type="Script" path="res://nivel2/decoracionNV2/disturbio_camara.gd" id="1_4dsxe"]
+[ext_resource type="Texture2D" uid="uid://bxmlsypkg4aw1" path="res://nivel2/disturbioSinFondo.png" id="1_apkfx"]
+
+[node name="disturbioCamara" type="Area2D"]
+script = ExtResource("1_4dsxe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 1.90735e-06)
+scale = Vector2(0.408, 0.402)
+texture = ExtResource("1_apkfx")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-105, 98, -105, -95, 121, -97, 123, 98)

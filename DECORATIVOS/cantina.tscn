@@ -1,16 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://dclmha6f3bhjr"]
+[gd_scene load_steps=4 format=3 uid="uid://dclmha6f3bhjr"]
 
-[ext_resource type="Texture2D" uid="uid://djc4kvinokqj4" path="res://imagenes/cantinaPNG.png" id="1_x0bn6"]
+[ext_resource type="Texture2D" uid="uid://djc4kvinokqj4" path="res://imagenes/acto1/cantinaPNG.png" id="1_x0bn6"]
+[ext_resource type="Script" path="res://DECORATIVOS/el_bolo.gd" id="2_odcy3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ugj7"]
+size = Vector2(49, 114)
 
 [node name="Cantina" type="Node2D"]
 
 [node name="CantinaPng" type="Sprite2D" parent="."]
-scale = Vector2(0.312, 0.3015)
+position = Vector2(5.99998, 1.00001)
+scale = Vector2(0.612, 0.57475)
 texture = ExtResource("1_x0bn6")
+metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="CantinaPng"]
-scale = Vector2(3.20513, 3.31675)
+[node name="elBolo" type="Area2D" parent="."]
+script = ExtResource("2_odcy3")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CantinaPng/StaticBody2D"]
-polygon = PackedVector2Array(-78, 75, -79, 5, -79, -37, -71, -37, -46, -64, 46, -64, 77, -36, 78, 73, 18, 73, 17, -2, -18, -2, -18, 76)
-one_way_collision = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="elBolo"]
+position = Vector2(-26.5, 87)
+shape = SubResource("RectangleShape2D_4ugj7")
+
+[node name="elBolon" type="TextEdit" parent="."]
+visible = false
+offset_left = -165.0
+offset_top = 186.0
+offset_right = 172.0
+offset_bottom = 227.0
+text = "Bolo: Al parecer hay disturbios en la calle."

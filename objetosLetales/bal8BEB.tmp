@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://8h05o2sblcmc"]
+
+[ext_resource type="Texture2D" uid="uid://ccltphhvxx05a" path="res://objetosLetales/Balazo.png" id="1_xaq4i"]
+[ext_resource type="Script" path="res://objetosLetales/bala.gd" id="1_xnign"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sboyy"]
+radius = 4.99986
+height = 29.9992
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3g0h"]
+atlas = ExtResource("1_xaq4i")
+region = Rect2(0, 0, 143, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4phco"]
+atlas = ExtResource("1_xaq4i")
+region = Rect2(143, 0, 143, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4h6e"]
+atlas = ExtResource("1_xaq4i")
+region = Rect2(286, 0, 143, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4t7f"]
+atlas = ExtResource("1_xaq4i")
+region = Rect2(429, 0, 143, 93)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pjhrm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3g0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4phco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4h6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4t7f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Bala" type="Area2D"]
+script = ExtResource("1_xnign")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.57821
+shape = SubResource("CapsuleShape2D_sboyy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.382867, 0.443548)
+sprite_frames = SubResource("SpriteFrames_pjhrm")
+frame_progress = 0.781055

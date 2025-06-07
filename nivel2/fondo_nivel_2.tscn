@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvhdbrj33bbue"]
+[gd_scene load_steps=9 format=3 uid="uid://dvhdbrj33bbue"]
 
 [ext_resource type="Texture2D" uid="uid://jjyg287il8kl" path="res://nivel2/cieloazul.jpg" id="1_b8heh"]
 [ext_resource type="Texture2D" uid="uid://ci7n8yqep52aa" path="res://nivel2/sueloExter.png" id="2_ngccw"]
+[ext_resource type="Texture2D" uid="uid://dtrvmu5jybbns" path="res://nivel2/la calle.jpeg" id="2_rydno"]
+[ext_resource type="PackedScene" uid="uid://dclmha6f3bhjr" path="res://DECORATIVOS/cantina.tscn" id="3_r5bk8"]
+[ext_resource type="PackedScene" uid="uid://dpltlcf6in0vk" path="res://DECORATIVOS/casa2.tscn" id="4_3af4q"]
+[ext_resource type="PackedScene" uid="uid://583hs3421rgr" path="res://DECORATIVOS/mercadon.tscn" id="5_l4165"]
+[ext_resource type="PackedScene" uid="uid://dbu7vxu4ptiyp" path="res://nivel2/decoracionNV2/disturbio_camara.tscn" id="6_hm7oe"]
+[ext_resource type="PackedScene" uid="uid://bk87rnrplwdng" path="res://nivel2/decoracionNV2/oficial.tscn" id="8_pccs1"]
 
 [node name="fondoNivel2" type="StaticBody2D"]
 
@@ -11,7 +17,8 @@ scale = Vector2(1.5573, 1.74831)
 texture = ExtResource("1_b8heh")
 
 [node name="Cieloazul" type="Sprite2D" parent="Cieloazul"]
-position = Vector2(583, 1)
+position = Vector2(583, -60.4158)
+scale = Vector2(1, 1.41638)
 texture = ExtResource("1_b8heh")
 
 [node name="Cieloazul2" type="Sprite2D" parent="Cieloazul/Cieloazul"]
@@ -26,6 +33,11 @@ texture = ExtResource("1_b8heh")
 position = Vector2(1177.26, -2.92118)
 texture = ExtResource("1_b8heh")
 
+[node name="LaCalle" type="Sprite2D" parent="."]
+position = Vector2(1030, -23.5)
+scale = Vector2(1.37238, 1.18548)
+texture = ExtResource("2_rydno")
+
 [node name="suelo" type="StaticBody2D" parent="."]
 position = Vector2(-378, 62)
 scale = Vector2(0.504728, 0.581356)
@@ -38,17 +50,107 @@ texture = ExtResource("2_ngccw")
 position = Vector2(1.98126, 6.88046)
 polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
 
-[node name="suelo2" type="StaticBody2D" parent="."]
-position = Vector2(48, 63)
-scale = Vector2(0.504728, 0.581356)
+[node name="suelo2" type="StaticBody2D" parent="suelo"]
+position = Vector2(844.019, 1.72012)
 metadata/_edit_group_ = true
 
-[node name="SueloExter" type="Sprite2D" parent="suelo2"]
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo2"]
 texture = ExtResource("2_ngccw")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo2"]
 position = Vector2(3.96253, 3.44023)
 polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 414.084, -106.647, -429.935, -103.207)
+
+[node name="suelo3" type="StaticBody2D" parent="suelo"]
+position = Vector2(1668.23, 1.72012)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo3"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo3"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -441.822, -106.647)
+
+[node name="suelo4" type="StaticBody2D" parent="suelo"]
+position = Vector2(2506.3, 5.16035)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo4"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo4"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -459.653, -108.367)
+
+[node name="suelo5" type="StaticBody2D" parent="suelo"]
+position = Vector2(3350.32, 3.44023)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo5"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo5"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 348.703, -116.968, -441.822, -103.207)
+
+[node name="suelo6" type="StaticBody2D" parent="suelo"]
+position = Vector2(4184.43, -1.72012)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo6"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo6"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -493.335, -110.087)
+
+[node name="suelo7" type="StaticBody2D" parent="suelo"]
+position = Vector2(5016.56, 1.72012)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo7"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo7"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
+
+[node name="suelo8" type="StaticBody2D" parent="suelo"]
+position = Vector2(5830.86, 1.72012)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo8"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo8"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -433.897, -104.927)
+
+[node name="suelo10" type="StaticBody2D" parent="suelo"]
+position = Vector2(6661.01, 1.72012)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo10"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo10"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
+
+[node name="suelo9" type="StaticBody2D" parent="suelo"]
+position = Vector2(-818.262, 1.72012)
+metadata/_edit_group_ = true
+
+[node name="SueloExter" type="Sprite2D" parent="suelo/suelo9"]
+texture = ExtResource("2_ngccw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo/suelo9"]
+position = Vector2(3.96253, 3.44023)
+polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="suelo"]
+polygon = PackedVector2Array(-77.2693, -104.927, -77.2693, 142.77, 7077.08, 146.21, 7081.04, -103.207)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-504.595, -168.919)
@@ -60,105 +162,25 @@ position = Vector2(2340, -172)
 scale = Vector2(0.204379, 1.1871)
 polygon = PackedVector2Array(-388.517, 149.035, 418.047, 142.77, 477.519, -286.48, -423.991, -108.367)
 
-[node name="suelo3" type="StaticBody2D" parent="."]
-position = Vector2(464, 63)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo3"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo3"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -441.822, -106.647)
-
-[node name="suelo4" type="StaticBody2D" parent="."]
-position = Vector2(887, 65)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo4"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo4"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -459.653, -108.367)
-
-[node name="suelo5" type="StaticBody2D" parent="."]
-position = Vector2(1313, 64)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo5"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo5"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 348.703, -116.968, -441.822, -103.207)
-
-[node name="suelo6" type="StaticBody2D" parent="."]
-position = Vector2(1734, 61)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo6"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo6"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -493.335, -110.087)
-
-[node name="suelo7" type="StaticBody2D" parent="."]
-position = Vector2(2154, 63)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo7"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo7"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
-
-[node name="suelo8" type="StaticBody2D" parent="."]
-position = Vector2(2565, 63)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo8"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo8"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -433.897, -104.927)
-
-[node name="suelo10" type="StaticBody2D" parent="."]
-position = Vector2(2984, 63)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
-
-[node name="SueloExter" type="Sprite2D" parent="suelo10"]
-texture = ExtResource("2_ngccw")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo10"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
-
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="movimeinto" type="TextEdit" parent="."]
 offset_left = -416.0
 offset_top = -220.0
-offset_right = -19.0
-offset_bottom = -175.0
-text = "Darle flecha ----> para caminar en esa direccion"
+offset_right = -30.0
+offset_bottom = -152.0
+text = "Darle flecha ----> para caminar en esa direccion.
+Toca: \"E\" para hablar con los pobladores."
 
-[node name="suelo9" type="StaticBody2D" parent="."]
-position = Vector2(-791, 63)
-scale = Vector2(0.504728, 0.581356)
-metadata/_edit_group_ = true
+[node name="Cantina" parent="." instance=ExtResource("3_r5bk8")]
+position = Vector2(149, -147)
 
-[node name="SueloExter" type="Sprite2D" parent="suelo9"]
-texture = ExtResource("2_ngccw")
+[node name="Casa2" parent="." instance=ExtResource("4_3af4q")]
+position = Vector2(496, -121)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo9"]
-position = Vector2(3.96253, 3.44023)
-polygon = PackedVector2Array(-420.028, 141.05, 418.047, 142.77, 420.028, -104.927, -423.991, -108.367)
+[node name="Mercadon" parent="." instance=ExtResource("5_l4165")]
+position = Vector2(1370, -153)
+
+[node name="oficial" parent="." instance=ExtResource("8_pccs1")]
+position = Vector2(827, -67)
+
+[node name="disturbioCamara" parent="." instance=ExtResource("6_hm7oe")]
+position = Vector2(1032, -89)

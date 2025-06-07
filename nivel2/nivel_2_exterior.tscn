@@ -6,7 +6,7 @@
 [node name="nivel2_exterior" type="Node2D"]
 
 [node name="fondoNivel2" parent="." instance=ExtResource("1_mfe4q")]
-position = Vector2(0, -1)
+position = Vector2(-127, -10)
 
 [node name="player1" parent="." instance=ExtResource("2_txn1v")]
 position = Vector2(-325, -46)
