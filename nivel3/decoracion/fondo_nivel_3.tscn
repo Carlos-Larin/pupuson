@@ -1,3 +1,162 @@
-[gd_scene format=3 uid="uid://d21noueol82o"]
+[gd_scene load_steps=7 format=3 uid="uid://d21noueol82o"]
+
+[ext_resource type="Texture2D" uid="uid://coyn8utob3b2o" path="res://nivel3/decoracion/bosqueEncantado.jpg" id="1_gpt35"]
+[ext_resource type="Texture2D" uid="uid://2367a5cj3b1j" path="res://nivel3/decoracion/fondoCielo.jpeg" id="2_fyqnu"]
+[ext_resource type="Texture2D" uid="uid://byproy7jpt36j" path="res://nivel3/decoracion/nubes.png" id="3_urpq7"]
+[ext_resource type="Texture2D" uid="uid://du53noxvnkp76" path="res://nivel3/decoracion/suelobosque-removebg-preview.png" id="4_06cbr"]
+[ext_resource type="Texture2D" uid="uid://livsi8sypt4s" path="res://nivel2/laEstatuaDelBosque.png" id="4_kajw7"]
+[ext_resource type="PackedScene" uid="uid://dh5m3a8q2w7tr" path="res://nivel1/lavadaña.tscn" id="6_gx864"]
 
 [node name="fondoNivel3" type="Node2D"]
+
+[node name="BosqueEncantado" type="Sprite2D" parent="."]
+position = Vector2(-367, -184)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado2" type="Sprite2D" parent="BosqueEncantado"]
+position = Vector2(736, 0)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado3" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2"]
+position = Vector2(-1471, -3)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado4" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3"]
+position = Vector2(2207, 3)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado5" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4"]
+position = Vector2(730, 2)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado6" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5"]
+position = Vector2(730, 0)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado7" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6"]
+position = Vector2(736, 0)
+texture = ExtResource("1_gpt35")
+
+[node name="BosqueEncantado8" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(732, 1)
+texture = ExtResource("1_gpt35")
+
+[node name="FondoCielo" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-1842, -361)
+scale = Vector2(29.9694, 7.80612)
+texture = ExtResource("2_fyqnu")
+
+[node name="Nubes" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-3487, -279)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes2" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-2780, -248)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes3" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-2045, -339)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes4" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-1284, -271)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes5" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-553, -360)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes6" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(-30, -241)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes7" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(171, -233)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes8" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(466, -284)
+texture = ExtResource("3_urpq7")
+
+[node name="Nubes9" type="Sprite2D" parent="BosqueEncantado/BosqueEncantado2/BosqueEncantado3/BosqueEncantado4/BosqueEncantado5/BosqueEncantado6/BosqueEncantado7"]
+position = Vector2(224, -415)
+texture = ExtResource("3_urpq7")
+
+[node name="LaEstatuaDelBosque" type="Sprite2D" parent="."]
+position = Vector2(-903, -169)
+texture = ExtResource("4_kajw7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Suelobosque-removebg-preview12" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(4472, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview11" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(3943, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview10" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(3418, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview7" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2897, 146)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview6" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2373, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview5" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1845, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview4" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1318, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview3" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(788, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(264, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview9" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-1306, 147)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview8" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-783, 150)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="Suelobosque-removebg-preview" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-264.75, 145)
+scale = Vector2(0.927065, 1)
+texture = ExtResource("4_06cbr")
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-1045, 6, -1041, 358, 4727, 362, 4731, -14, 367, -13, 367, 51, -5, 53, -10, -9)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(3962, -30, 3964, -750, 4397, -24)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-723, 0, -537, -364, -521, -3)
+
+[node name="LAVADAÑA" parent="." instance=ExtResource("6_gx864")]
+position = Vector2(180, 24)
+scale = Vector2(0.44, 1)

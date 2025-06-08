@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var destino: String = "res://nivel2/nivel_2_exterior.tscn"
+@export var destino: String = "res://nivel3/nivel3_esenario/nivel_3_el_bosque.tscn"
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coyn8utob3b2o"
-path="res://.godot/imported/bosqueEncantado.jpg-ea2d7b8ade43b7ac551ff51bcaab43bd.ctex"
+uid="uid://2367a5cj3b1j"
+path="res://.godot/imported/fondoCielo.jpeg-78f8bd9b3d76b919a012329482bdf6d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://nivel2/bosqueEncantado.jpg"
-dest_files=["res://.godot/imported/bosqueEncantado.jpg-ea2d7b8ade43b7ac551ff51bcaab43bd.ctex"]
+source_file="res://nivel3/decoracion/fondoCielo.jpeg"
+dest_files=["res://.godot/imported/fondoCielo.jpeg-78f8bd9b3d76b919a012329482bdf6d7.ctex"]
 
 [params]
 
