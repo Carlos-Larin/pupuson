@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv0iqntatcewx"]
+[gd_scene load_steps=6 format=3 uid="uid://dv0iqntatcewx"]
 
 [ext_resource type="PackedScene" uid="uid://dvhdbrj33bbue" path="res://nivel2/fondo_nivel_2.tscn" id="1_mfe4q"]
 [ext_resource type="PackedScene" uid="uid://c3uko41r7t7tb" path="res://player/player1.tscn" id="2_txn1v"]
+[ext_resource type="PackedScene" uid="uid://bot7ors2ra3tx" path="res://objetosLetales/ratata.tscn" id="3_05l52"]
 [ext_resource type="PackedScene" uid="uid://hsrnudoqxp3n" path="res://objetosLetales/ladron_letal.tscn" id="3_youbk"]
+[ext_resource type="PackedScene" uid="uid://pp85j7mwuvnk" path="res://nivel2/decoracionNV2/portal_al_bosque.tscn" id="5_1ddgj"]
 
 [node name="nivel2_exterior" type="Node2D"]
 
@@ -10,20 +12,20 @@
 position = Vector2(-111, -20)
 
 [node name="LadronLetal" parent="." instance=ExtResource("3_youbk")]
-position = Vector2(-193, -86)
-velocidad_disparo = 150.0
-rango_vision = 300.0
-distancia_muzzle = 20.0
+position = Vector2(-48, -85)
 
 [node name="LadronLetal2" parent="." instance=ExtResource("3_youbk")]
-position = Vector2(1289, -110)
-velocidad_disparo = 150.0
-rango_vision = 300.0
-distancia_muzzle = 20.0
+position = Vector2(1289, -82)
+
+[node name="ratata" parent="." instance=ExtResource("3_05l52")]
+position = Vector2(2047, -25)
 
 [node name="player1" parent="." instance=ExtResource("2_txn1v")]
-position = Vector2(-498, -74)
+position = Vector2(-484, -85)
 
 [node name="Camera2D" type="Camera2D" parent="player1"]
 position = Vector2(7, 5)
 zoom = Vector2(0.65, 0.65)
+
+[node name="Portal al bosque" parent="." instance=ExtResource("5_1ddgj")]
+position = Vector2(2597, -157)

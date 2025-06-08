@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://pp85j7mwuvnk"]
+
+[ext_resource type="Script" path="res://nivel2/decoracionNV2/portal_al_bosque.gd" id="1_mlp2p"]
+[ext_resource type="Texture2D" uid="uid://livsi8sypt4s" path="res://nivel2/laEstatuaDelBosque.png" id="1_uph52"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qn1gb"]
+size = Vector2(102, 243)
+
+[node name="Portal al bosque" type="Area2D"]
+script = ExtResource("1_mlp2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_uph52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 40)
+shape = SubResource("RectangleShape2D_qn1gb")

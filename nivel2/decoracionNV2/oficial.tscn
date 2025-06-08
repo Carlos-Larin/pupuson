@@ -20,11 +20,10 @@ position = Vector2(-0.5, 5.5)
 shape = SubResource("RectangleShape2D_0v2ra")
 
 [node name="HablarOficial" type="TextEdit" parent="."]
-visible = false
-offset_left = -178.0
-offset_top = 87.0
-offset_right = 195.0
-offset_bottom = 177.0
+offset_left = -256.0
+offset_top = 82.0
+offset_right = 251.0
+offset_bottom = 186.0
 text = "tu: oficial ¿como puedo pasar?.
-Agente: solo que pases por los techos cipote,
-toma carrera desde el primer arbol."
+Agente: solo que pases por los techos joven,
+(\"Recuerda puedes saltar sobre los enemigos para impulsarte\")"
