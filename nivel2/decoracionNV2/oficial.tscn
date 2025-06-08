@@ -20,6 +20,7 @@ position = Vector2(-0.5, 5.5)
 shape = SubResource("RectangleShape2D_0v2ra")
 
 [node name="HablarOficial" type="TextEdit" parent="."]
+visible = false
 offset_left = -256.0
 offset_top = 82.0
 offset_right = 251.0

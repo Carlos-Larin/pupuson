@@ -210,8 +210,8 @@ offset_left = -416.0
 offset_top = -220.0
 offset_right = -30.0
 offset_bottom = -152.0
-text = "Darle flecha ----> para caminar en esa direccion.
-Toca: \"E\" para hablar con los pobladores."
+text = "Toca: \"E\" para hablar con los pobladores.
+Toca: \"F\" para disparar."
 
 [node name="movimeinto2" type="TextEdit" parent="."]
 offset_left = -320.0
