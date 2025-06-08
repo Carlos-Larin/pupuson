@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8q4kcdhivwv3"]
+
+[ext_resource type="PackedScene" uid="uid://d21noueol82o" path="res://nivel3/decoracion/fondo_nivel_3.tscn" id="1_mqih7"]
+
+[node name="nivel3_elBosque" type="Node2D"]
+
+[node name="fondoNivel3" parent="." instance=ExtResource("1_mqih7")]
