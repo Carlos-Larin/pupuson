@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://odux4xbdqs08" path="res://nivel2/heroeDisparando_Fas2-removebg-preview.png" id="2_58cm8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rag7b"]
-size = Vector2(86, 136)
+size = Vector2(86, 129)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b21k3"]
 
@@ -117,7 +117,7 @@ animations = [{
 script = ExtResource("1_0b7w1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
+position = Vector2(1, -4.5)
 shape = SubResource("RectangleShape2D_rag7b")
 
 [node name="HealthLabel" type="Label" parent="."]
@@ -135,10 +135,11 @@ offset_bottom = -71.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_b21k3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 0)
-scale = Vector2(0.917703, 0.857379)
+position = Vector2(1, -0.651302)
+scale = Vector2(0.917703, 0.84827)
 sprite_frames = SubResource("SpriteFrames_jiae5")
-animation = &"disparando"
+frame = 10
+frame_progress = 0.867792
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(72, 14)

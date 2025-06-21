@@ -83,7 +83,7 @@ position = Vector2(224, -415)
 texture = ExtResource("3_urpq7")
 
 [node name="LaEstatuaDelBosque" type="Sprite2D" parent="."]
-position = Vector2(-903, -169)
+position = Vector2(-659, -159)
 texture = ExtResource("4_kajw7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
